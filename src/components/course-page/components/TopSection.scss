@@ -1,0 +1,70 @@
+.CTopSection-Container {
+  max-width: 100%;
+  @if $language == "en"{
+  @include flexRow(flex-end, space-between);
+  } @else {
+    @include flexRow(flex-end, space-between, row-reverse);
+  }
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../../assets/icons/course/TopSection-Medium.png);
+  padding:5em 8% 0em 8%;
+ 
+  @include boxSizing;
+  @media only screen and (min-width: $bp-large) {
+    background-image: url(../../../assets/icons/course/TopSection-Large.png);
+
+  }
+
+}
+.CTopSection-LeftSubContainer {
+  margin-bottom: 1em;
+  width: 70%;
+  @media only screen and (min-width: $bp-large) {
+    margin-bottom: 2em;
+    width: 60%;
+  }
+  @media only screen and (min-width: $bp-xl) {
+    width: 55%;
+  }
+ 
+}
+.CTopSection-RightSubContainer {
+  margin-bottom: 1em;
+  @media only screen and (min-width: $bp-large) {
+    margin-bottom: 2em;
+  }
+}
+.CTopSection-Row {
+  @include flexRow(center, flex-end);
+  @include font(1rem, 400, white);
+  margin-bottom: 0.2em;
+}
+.CTopSection-Header {
+  @include font(xx-large, 400, white);
+  @if $language == "ar"{
+    text-align: right;
+    direction: rtl;
+    &:after {
+      content: "a";
+      color: transparent;
+    }
+  }
+}
+.CTopSection-SubHeader {
+  @include font(large, 300, white);
+  @if $language == "ar"{
+    text-align: right;
+    direction: rtl;
+    &:after {
+      content: "a";
+      color: transparent;
+    }
+  }
+}
+
+.CTopSection-T {
+  @include font(x-large, 600, white);
+  margin-left: 0.3em;
+}

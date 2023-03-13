@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "courzerve-dev"
+  },
+  "targets": {
+    "courzerve-dev": {
+      "hosting": {
+        "dev": [
+          "courzerve-web"
+        ],
+        "prod": [
+          "courzerve-web-p"
+        ]
+      }
+    }
+  }
+}

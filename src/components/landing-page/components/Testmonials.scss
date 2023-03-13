@@ -1,0 +1,109 @@
+.Testmonials-Title-Container {
+  @include flexColumn(center, flex-start);
+  margin-bottom: 2em;
+  margin-top: 1em;
+  @media only screen and (min-width: $bp-large) {
+    margin-top: 3em;
+  }
+}
+
+#Testmonials-Container {
+  display: flex;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    width: 0px; /* Remove scrollbar space */
+    background: transparent; /* Optional: just make scrollbar invisible */
+  }
+  padding-bottom: 0.5em;
+  @media only screen and (min-width: $bp-large) {
+    max-width: 90%;
+  }
+}
+
+.Testmonials-Card-Container {
+  @include flexColumn(flex-start, flex-start);
+  min-width: 16.5em;
+  max-width: 16.5em;
+  margin-top: 0;
+  height: 26em;
+  margin-right: 1em;
+  position: relative;
+  @media only screen and (min-width: $bp-med) {
+    min-width: 17.5em;
+    max-width: 17.5em;
+  }
+}
+.Testmonials-Card-Image {
+  height: 6em;
+  width: 6em;
+  border-radius: 50%;
+  position: absolute;
+  object-fit: cover;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+
+}
+
+.Testimonials-card-TextContainer{
+  overflow: auto;
+  height: auto;
+}
+
+.Testmonials-Card-Main {
+  -webkit-box-shadow: 0px 4px 6px #4e4e4e48;
+  -moz-box-shadow: 0px 4px 6px#4e4e4e48;
+  box-shadow: 1px 4px 6px #4e4e4e48;
+  border: solid 2px rgba(92, 92, 92, 0.116);
+  margin-top: 3em;
+  margin-bottom: 0.2em;
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  padding-top: 4em;
+  @include flexColumn(center, flex-start);
+}
+.Testmonials-Card-H {
+  @include font(large, 600, $darkGreyTextColor);
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 0;
+}
+.Testmonials-Card-SubH {
+  @include font(0.9rem, 400, $greyTextColor);
+  margin: 0.3em 0.1em 0 0.1em;
+  @if $language == ar {
+   
+  }
+ 
+}
+.Testmonials-Card-Icon {
+  font-size: 1.8rem;
+  color: $primaryColor;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+$font-size2: 17px;
+$line-height2: 1.6;
+$lines-to-show2: 6;
+
+.Testmonials-Card-Text {
+  display: block; /* Fallback for non-webkit */
+  display: -webkit-box;
+  max-width: 90%;
+  height: $font-size2 * $line-height2 * $lines-to-show2; /* Fallback for non-webkit */
+  font-size: $font-size2;
+  line-height: $line-height2;
+  -webkit-line-clamp: $lines-to-show2;
+  -webkit-box-orient: vertical;
+  @include font(large, 400, $greyTextColor);
+  text-align: center;
+  margin: auto
+}
+

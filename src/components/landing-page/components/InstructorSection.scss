@@ -1,0 +1,74 @@
+.InstructorSection-MainContainer {
+  @if $language == "en" {
+    @include flexColumn(flex-start, flex-start);
+  } @else {
+    @include flexColumn(flex-end, flex-start);
+  }
+
+  margin-top: 2em;
+  background-image: url(../../../assets/icons/landing/landing-instructor-mobile.png);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 7em;
+  @media only screen and (min-width: $bp-med) {
+    background-image: url(../../../assets/icons/landing/landing-instructor-medium.png);
+    height: 9em;
+  }
+  @media only screen and (min-width: $bp-large) {
+    height: 12em;
+  }
+  @media only screen and (min-width: $bp-xl) {
+    height: 14em;
+    background-image: url(../../../assets/icons/landing/landing-instructor-large.png);
+  }
+}
+.InstructorSection-Header {
+  @include font(large, 600);
+  font-weight: bold;
+  margin: 1em 1em 0.5em 1em;
+  @media only screen and (min-width: $bp-med) {
+    font-size: x-large;
+    margin: 1.5em 1.5em 0.5em 1.5em;
+  }
+  @media only screen and (min-width: $bp-large) {
+    font-size: xx-large;
+  }
+  @media only screen and (min-width: $bp-xl) {
+    margin: 2em 2em 0.5em 2em;
+  }
+}
+
+.InstructorSection-B {
+  @include button($primaryColor, 1em, 1em);
+  @include font(0.8rem, 400, $primaryColor);
+  font-weight: bold;
+  padding: 0.3em 1.5em 0.3em 1.5em;
+  margin-left: 1em;
+  margin-right: 1em;
+  &:active,
+  &:focus,
+  &:hover {
+    @include buttonShrink(0.93);
+    cursor: pointer;
+  }
+  @media only screen and (min-width: $bp-large) {
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+  }
+  @media only screen and (min-width: $bp-med) {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+  @media only screen and (min-width: $bp-large) {
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+    @include button($primaryColor, 1.3em, 1em);
+    padding: 0.5em 3em 0.5em 3em;
+  }
+  @media only screen and (min-width: $bp-xl) {
+    margin-left: 4em;
+    margin-right: 4em;
+    padding: 0.5em 3.5em 0.5em 3.5em;
+  }
+}

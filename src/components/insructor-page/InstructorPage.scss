@@ -1,0 +1,28 @@
+.InstructorPage-UpperContainer {
+    @include UpperContainer();
+    background-image: url(../../assets/icons/jobs/job-background-mobile.png);
+    @media only screen and (min-width: $bp-med) {
+        background-image: url(../../assets/icons/jobs/job-background.png);
+    }
+}
+.InstructorPage-SubTitle {
+    @include font(medium, 300);
+}
+.InstructorPage-MainContainer {
+    @media only screen and (min-width: $bp-med) {
+         @if $language == en {
+            padding-left: 34% !important;
+         } @else {
+            padding-right: 34% !important;
+         }
+    }
+    @media only screen and (min-width: $bp-xl) {
+        @if $language == en {
+            padding: 2em 8% 3em 27em !important;
+         } @else {
+            padding: 2em 27em 3em 8% !important;
+         }
+        
+        @include boxSizing;
+    }
+}

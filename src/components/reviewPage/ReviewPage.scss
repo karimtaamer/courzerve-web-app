@@ -1,0 +1,240 @@
+.reviewPageMainContainer {
+    min-height: fit-content;
+    margin-bottom: 2em;
+    padding-bottom: 1em;
+    @include boxSizing;
+   height: 100%;
+}
+.reviewPage-UpperContainer{
+    @include UpperContainer();
+    background-image: url(../../assets/icons/reviewPage/ReviewPage-mobile.png);
+    @media only screen and (min-width: $bp-med) {
+      background-image: url(../../assets/icons/reviewPage/ReviewPage-web.png);
+    }
+}
+.reviewPage-MainInfoContainer{
+    @include flexColumn(flex-start, center);
+    height: 100%;
+    width: 92%;
+   
+}
+.reviewPage-mainInnerContainer{
+    @include mainPadding;
+    display: block;
+    @media only screen and (min-width: $bp-med) {
+        display: flex;
+        @if $language == ar {
+            flex-direction: row-reverse;
+        }
+    }
+}
+
+.reviewPage-mainReviewContainer{
+    @include boxSizing;
+    @include font(medium, 400, grey);
+    padding:1em;
+    margin-top: 1em;
+    box-shadow: 1px 2px 4px 2px rgba(141, 141, 141, 0.356);
+    border-radius: 2em;
+    @media only screen and (min-width: $bp-med) {
+        width: 30%;
+        margin-top: 1em;
+        position: fixed;
+        
+        
+    }
+}
+
+.reviewPage-MainReviewRatingSection{
+    margin-left: 0;
+    width: 100%;
+    @media only screen and (min-width: $bp-med) {
+    
+    @if $language == ar {
+        margin-right: 40%;
+        text-align: right;
+    }@else{
+        margin-left: 40%;
+        text-align: left;
+    }
+    }
+}
+
+.review-input{
+    width: 100%;
+    min-height: 4vh;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include font(medium, 400, $greyTextColor);
+    border: solid 1px #7070709c;
+    border-radius: 6px;
+    margin-top: 2em;
+    @include boxSizing;
+    
+    @if $language == "en" {
+        @include flexRow(center, flex-start);
+        text-align: left;
+        padding-left: 8px;
+    } @else {
+        @include flexRow(center, flex-start, row-reverse);
+        text-align: right;
+        padding-right: 8px;
+    }
+    &::placeholder{
+      padding-left: 2px;
+    }
+    // @media only screen and (min-width: $bp-med) {
+    //     width: 100%;
+    // }
+}
+
+.review-inputArea{
+    width: 100%;
+    resize: none;
+    min-height: 4vh;
+    @include font(medium, 400, $greyTextColor);
+    border: solid 1px #7070709c;
+    border-radius: 6px;
+    margin-top: 1.6em;
+    padding-left: 8px;
+    @include boxSizing;
+    @if $language == "en"{
+        text-align: left;
+        padding-left: 8px;
+    } @else {
+        text-align: right;
+        padding-right: 8px;
+    }
+    &::placeholder{
+      padding-left: 2px;
+    }
+    @media only screen and (min-width: $bp-med) {
+       width: 100%;
+    }
+}
+
+
+.reviewPage-MainSectionInfoSection{
+    @include flexColumn(flex-start, center);
+    margin-bottom: 2em;
+    @include boxSizing;
+}
+.reviewPage-MainSectionRatingSection{
+    @include font(medium, 400, gray);
+    @include flexColumn(flex-start, center);
+    width:100%;
+    // @if $language == en{
+    //     @include flexColumn(flex-start, center);
+    // } @else{
+    //     @include flexColumn(flex-end, center);
+    // }
+}
+.reviewPage-feedbackText{
+@if $language == en {
+    margin-right: auto;
+    text-align: left;
+}@else {
+    margin-left: auto;
+    text-align: right;
+}
+
+}
+
+.reviewPage-SubContainer{
+    width: 100%;
+    @include boxSizing;
+    margin-top:1em;
+}
+.ReviewPage-ratingSection{
+    @include flexColumn(flex-start,center);
+    margin-bottom: 0.3em;
+    @if $language == ar {
+        @include flexColumn(flex-end,center);
+    }
+    width: 100%;
+    @media only screen and (min-width: $bp-med) {
+        @include flexRow(center,flex-start);
+        @if $language == ar {
+            @include flexRow(center,flex-start,row-reverse);
+        }
+    }
+    
+}
+.ReviewPage-reviewSection{
+    width: 100%
+}
+.reviewPage-MainSectionReviewSection{
+    @include flexColumn(flex-start, center);
+    @include font(medium, 400, gray);
+    width:100%;
+}
+.reviewPage-Confirm-btn{
+    background-color: $primaryColor;
+     padding: 0.6em 0em 0.6em 0em;
+    width: 100%;
+    @include button(#ffffff, 0.7em, 0.5em);
+    @include font(medium, 100, white);
+    margin-top: 1em;
+    @media only screen and (min-width: $bp-med) {
+        padding: 0.6em 0em 0.6em 0em;
+        width: 40%;
+    }
+}
+
+////////////levels section
+
+.reviewPage-Circle{
+border: solid 0.1em gray;
+height: 1.2em;
+width: 1.2em;
+border-radius: 50%;
+color: transparent;
+margin-right: 0.2em;
+margin-left: 0.5em;
+@media only screen and (min-width: $bp-med) {
+    display: flex;
+    height: 0.8em;
+width: 0.8em;
+margin-left: 0.3em;
+  }
+  @media only screen and (min-width: $bp-large) {
+    min-height: 1.1em;
+    min-width: 1.1em;
+    font-size: large;
+      }
+}
+.levelsSection-levels{
+        @include flexRow(center,center);
+        // margin-bottom:0.3em ;
+}
+
+
+////////////top course info section
+
+.reviewPage-text{
+    text-align: center;
+    @include font(medium, 400, black)
+}
+
+.reviewPage-courseInfoSection{
+    margin-top: 1em;
+    @if $language == en{
+        @include flexRow(center, flex-start)
+    } @else {
+        @include flexRow(center, flex-start, row-reverse)
+    }
+    
+}
+
+.reviewPage-roundImg{
+    border-radius: 50%;
+    height: 5em;
+    width: 5em;
+    
+    box-shadow: 1px 2px 4px 2px rgba(141, 141, 141, 0.356);
+    @if $language == en{
+        margin-right: 1em;
+    } @else {
+        margin-left: 1em;
+    }
+}

@@ -1,0 +1,69 @@
+/*Hover animtions*/
+
+
+/*Button Shrink*/
+
+@mixin buttonShrink($percent: 0.9) {
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: scale($percent);
+  transform: scale($percent);
+}
+
+/*Button Grow*/
+
+@mixin buttonGrow($percent: 1.1) {
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: scale($percent);
+  transform: scale($percent);
+  
+}
+
+/*Border Fade In*/
+@mixin borderFadeIn {
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  position: relative;
+  overflow: hidden;
+}
+
+@mixin borderFadeInBefore($borderRadius:1em) {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-color: $secondryColor;
+  border-radius: $borderRadius;
+  border-style: solid;
+  border-width: 0;
+  -webkit-transition-property: border-width;
+  transition-property: border-width;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+@mixin borderFadeInHover($borderWidth:4px) {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  border-width: $borderWidth;
+}
+
+

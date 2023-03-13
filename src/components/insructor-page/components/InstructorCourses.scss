@@ -1,0 +1,55 @@
+.InstructorCourses-Courses-Container {
+    @if $language == en {
+        @include flexRow();
+    } @else {
+        @include flexRow(flex-start, flex-start, row-reverse);
+    }
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 1em;
+}
+
+.InstructorCourses-Card-Container {
+    @include boxShadow();
+    height: 8em;
+    padding: 0;
+   
+    width: 100%;
+    margin-top: 1.2em;
+    border-radius: 0.7em;
+    @if $language == "en"{
+        padding-right: 1em;
+      } @else {
+        padding-left: 1em;
+      }
+    @media only screen and (min-width: $bp-med) {
+        width: 20em;
+        margin-right: 1em;
+      }
+}
+.InstructorCourses-Card-Img {
+    width: 40%;
+    height: 100%;
+    
+    @if $language == "en"{
+        margin-right: 0.5em;
+        border-radius: 0.7em 0 0 0.7em;
+      } @else {
+        margin-left: 0.5em;
+        border-radius: 0 0.7em 0.7em 0;
+      }
+}
+.InstructorCourses-Card-Title {
+    @include overflow(16px, 3,1.2);
+    @include font(medium, 600, $darkGreyTextColor);
+}
+.InstructorCourses-Card-B {
+    @include button(white, 0.7em, 0.5em);
+    height: 2.5em;
+    margin-top: 0.5em;
+    width: 8em;
+    &:hover{
+        @include buttonShrink(0.9);
+        cursor: pointer;
+    }
+}

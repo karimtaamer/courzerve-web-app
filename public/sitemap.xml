@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+<url>
+  <loc>https://courzerve.com/</loc>
+  <lastmod>2020-10-13T15:03:13+00:00</lastmod>
+  <priority>1</priority>
+</url>
+  
+<url>
+  <loc>https://courzerve.com/en/jobs</loc>
+  <lastmod>2020-10-13T15:03:13+00:00</lastmod>
+</url>
+<url>
+  <loc>https://courzerve.com/ar/jobs</loc>
+  <lastmod>2020-10-13T15:03:13+00:00</lastmod>
+</url>
+
+<url>
+  <loc>https://courzerve.com/en/about</loc>
+  <lastmod>2020-10-13T15:03:13+00:00</lastmod>
+</url>
+<url>
+  <loc>https://courzerve.com/ar/about</loc>
+  <lastmod>2020-10-13T15:03:13+00:00</lastmod>
+</url>
+
+<url>
+  <loc>https://courzerve.com/en/contactus</loc>
+  <lastmod>2020-10-13T15:03:13+00:00</lastmod>
+</url>
+<url>
+  <loc>https://courzerve.com/ar/contactus</loc>
+  <lastmod>2020-10-13T15:03:13+00:00</lastmod>
+</url>
+
+<url>
+  <loc>https://courzerve.com/en/course/webcourse</loc>
+  <lastmod>2020-10-13T15:03:13+00:00</lastmod>
+</url>
+<url>
+  <loc>https://courzerve.com/ar/course/webcourse</loc>
+  <lastmod>2020-10-13T15:03:13+00:00</lastmod>
+</url>
+
+<url>
+  <loc>https://courzerve.com/en/course/android-beginner</loc>
+  <lastmod>2020-10-13T15:03:13+00:00</lastmod>
+</url>
+<url>
+  <loc>https://courzerve.com/ar/course/android-beginner</loc>
+  <lastmod>2020-10-13T15:03:13+00:00</lastmod>
+</url>
+
+<url>
+  <loc>https://courzerve.com/en/course/android-advanced</loc>
+  <lastmod>2020-10-13T15:03:13+00:00</lastmod>
+</url>
+<url>
+  <loc>https://courzerve.com/ar/course/android-advanced</loc>
+  <lastmod>2020-10-13T15:03:13+00:00</lastmod>
+</url>
+
+<url>
+  <loc>https://courzerve.com/en/course/python</loc>
+  <lastmod>2020-10-13T15:03:13+00:00</lastmod>
+</url>
+<url>
+  <loc>https://courzerve.com/ar/course/python</loc>
+  <lastmod>2020-10-13T15:03:13+00:00</lastmod>
+</url>
+
+<url>
+  <loc>https://courzerve.com/en/instructor/5ee7bbf41a4dd20024989647</loc>
+  <lastmod>2020-10-13T15:03:13+00:00</lastmod>
+</url>
+<url>
+  <loc>https://courzerve.com/ar/instructor/5ee7bbf41a4dd20024989647</loc>
+  <lastmod>2020-10-13T15:03:13+00:00</lastmod>
+</url>
+
+<url>
+  <loc>https://courzerve.com/en/instructor/5ef260fd2a06c900248ff5bf</loc>
+  <lastmod>2020-10-13T15:03:13+00:00</lastmod>
+</url>
+<url>
+  <loc>https://courzerve.com/ar/instructor/5ef260fd2a06c900248ff5bf</loc>
+  <lastmod>2020-10-13T15:03:13+00:00</lastmod>
+</url>
+
+<url>
+  <loc>https://courzerve.com/en/instructor/5f65f3335c4a8600247def34</loc>
+  <lastmod>2020-10-13T15:03:13+00:00</lastmod>
+</url>
+<url>
+  <loc>https://courzerve.com/ar/instructor/5f65f3335c4a8600247def34</loc>
+  <lastmod>2020-10-13T15:03:13+00:00</lastmod>
+</url>
+
+
+</urlset>

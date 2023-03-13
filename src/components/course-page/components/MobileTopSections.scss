@@ -1,0 +1,175 @@
+.MobileTopSection-Video-Container {
+  @include flexRow(center, center);
+  background-size: cover;
+  width: 100%;
+  height: 15em;
+}
+
+.MobileTopSection-Main-Container {
+  margin: 1em auto 1em auto;
+  padding: 1em;
+  width: 94%;
+  
+  -webkit-box-shadow: 0px 3px 7px -1px rgba(0, 0, 0, 0.267);
+  -moz-box-shadow: 0px 3px 7px -1px rgba(0, 0, 0, 0.267);
+  box-shadow: 0px 3px 7px -1px rgba(0, 0, 0, 0.267);
+  @include boxSizing;
+  border-radius: 1em;
+}
+
+.MobileTopSection-Header {
+  @include font(x-large, 400, $darkGreyTextColor);
+  line-height: 1.3;
+  @if $language == ar {
+    text-align: right;
+    direction: rtl;
+    &:after {
+      content: "a";
+      color: transparent;
+    }
+  }
+}
+.MobileTopSection-SubHeader {
+  @include font(medium, 300, $greyTextColor);
+  @if $language == ar {
+    text-align: right;
+    direction: rtl;
+    &:after {
+      content: "a";
+      color: transparent;
+    }
+  }
+}
+.MobileTopSection-Row{
+  
+  @if $language == en {
+    @include flexRow(center);
+  } @else {
+    @include flexRow(center, flex-start, row-reverse);
+  }
+  @include font(1rem, 400, $greyTextColor);
+  margin-top: 1em;
+}
+
+.MobileTopSection-Row p {
+  @if $language == en {
+    @include flexRow(center, center)
+  } @else {
+    @include flexRow(center, center, row-reverse);
+    text-align: right;
+    }
+    &:after {
+      content: "a";
+      color: transparent;
+  }
+  
+}
+
+.MobileTopSection-timing{
+  margin: 0;
+  @if $language == en {
+    margin-right: 0.2em;
+    &::after{
+      content: ":";
+    }
+  } @else {
+    margin-left: 0.2em;
+    &::before{
+      content: ":";
+    }
+  }
+}
+
+.MobileTopSection-T {
+  @include font(medium, 600, $greyTextColor);
+  margin-left: 0.2em;
+}
+
+.MobileTopSection-Row-Icon{
+  color: $primaryColor;
+  @if $language == en {
+    margin-right: 0.5em;
+  } @else {
+    margin-left: 0.5em;
+  }
+
+  font-size: large;
+}
+
+.MobileTopSection-Instructor-Container {
+  width: 100%;
+  @if $language == en {
+    @include flexRow(center, space-between);
+  } @else {
+    @include flexRow(center, space-between, row-reverse);
+  }
+  border-top: solid 2px rgba(190, 190, 190, 0.658);
+  margin: 0;
+  padding-top: 1em;
+  margin-top: 1em;
+  @include boxSizing
+}
+
+.MobileTopSection-Instructor-Img {
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 50%;
+  box-shadow: 2px 6px 10px -5px;
+  @if $language == en {
+    margin-right: 0.5em;
+  } @else {
+    margin-left: 0.5em;
+  }
+  
+}
+
+.MobilTopSection-Instructor-info{
+  @if $language == en {
+    text-align: left;
+  } @else {
+    text-align: right;
+    // direction: rtl;
+    &:after {
+      content: "a";
+      color: transparent;
+    }
+  }
+  width: 40%;
+}
+
+.MobileTopSection-GoToProfile{
+  @if $language == en {
+    margin-left: auto;
+    @include flexRow(center,flex-start)
+  } @else {
+    margin-right: auto;
+    @include flexRow(center,flex-start, row-reverse)
+  }
+  @include font(0.9rem, 600, $primaryColor);
+  
+}
+
+.CoursePage-MobileApplySection-PriceToBeSale{
+  @include font(0.7rem, 400, rgb(180, 180, 180));
+  text-decoration: line-through;
+  margin-left: 5px;
+  margin-top: 3px;
+}
+
+.mobileApplySection-messanger-Container{
+  position: relative;
+  top: -50px;
+  right: 36px;
+  border-radius: 50%;
+  @include boxShadow();
+}
+.facebookIconMobile{
+  color: $primaryColor;
+  background: transparent;
+  border: none;
+  font-size: 2.5rem;
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  
+}

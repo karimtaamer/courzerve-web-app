@@ -1,0 +1,259 @@
+.reviewSection-mainContainer {
+    @if $language == en {
+        @include flexColumn(flex-start, center);
+    } @else {
+        @include flexColumn(flex-end, center);
+    }
+    margin-top: 2em;
+    width: 100%;
+}
+
+.reviewSection-bars {
+    display: none;
+    height: 0.9em;
+    width: 20vw;
+    position: relative;
+    border-radius: 6px;
+    border: solid 1px rgba(190, 190, 190, 0.493);
+    @if $language == en {
+        margin-right: 1em;
+    } @else {
+        margin-left: 1em;
+    }
+    @media only screen and (min-width: 420px) {
+        display: block;
+    }
+}
+.reviewSection-barInner {
+    display: none;
+    height: 100%;
+    border-radius: 6px;
+    background-color: #ffdc64;
+    position: relative;
+    overflow: hidden;
+    @media only screen and (min-width: 420px) {
+        display: block;
+    }
+}
+
+.reviewSection-AverageConainer-title {
+    @include font(medium, 400, $darkGreyTextColor);
+    width: 100%;
+    @if $language == en {
+        text-align: left;
+       
+    } @else {
+        text-align: right;
+        
+    }
+}
+
+.reviewSection-averageContainer-box {
+    border: solid 1px rgba(190, 190, 190, 0.658);
+    width: 100%;
+    min-height: 10.5em;
+    @include boxSizing;
+    @include flexColumn(center, center);
+    margin-top: 1em;
+    @if $language == en {
+        border-radius: 15px 0 0 15px;
+    } @else {
+        border-radius: 0 15px 15px 0;
+    }
+}
+
+.reviewSection-subContainer {
+    margin: 1em 0 1em 0;
+    @if $language == en {
+        @include flexRow(center, flex-start);
+    } @else {
+        @include flexRow(center, flex-start, row-reverse);
+    }
+    width: 100%;
+    padding-bottom: 1em;
+    border-bottom: solid 1px rgba(190, 190, 190, 0.658);
+}
+.reviewSection-DetailedContainer {
+    width: 100%;
+    min-height: 10em;
+    @if $language == en {
+        margin-left: 0.5em;
+    } @else {
+        margin-right: 0.5em;
+    }
+}
+
+.reviewSection-DetailedContainer-box {
+    border: solid 1px rgba(190, 190, 190, 0.658);
+    width: 94%;
+    min-height: 91%;
+    height: 8em;
+    margin-top: 1em;
+    padding: 1.2em 0.3em 1.2em 0.5em;
+    @if $language == en {
+        border-radius: 0 15px 15px 0;
+        @include flexColumn(flex-start, flex-start);
+    } @else {
+        border-radius: 15px 0 0 15px;
+        @include flexColumn(flex-end, flex-start);
+    }
+    @media only screen and (min-width: $bp-med) {
+        padding: 1.25em 1em 1.1em 1em;
+        width: 94%;
+    }
+}
+
+.reviewSection-averageValue {
+    @include font(50px, 400, #ffdc64);
+}
+
+.reviewSection-averagereviews {
+    @include font(medium, 400, $darkGreyTextColor);
+    margin-top: 1em;
+}
+
+.reviewSection-AverageConainer {
+    width: 15em;
+    @if $language == en {
+        margin-right: 0.5em;
+    } @else {
+        margin-left: 0.5em;
+    }
+    @include boxSizing;
+    min-height: 10em;
+    @media only screen and (min-width: $bp-med) {
+        width: 35%;
+    }
+}
+
+.reviewSection-DetailedContainer-subContainers {
+    @if $language == en {
+        @include flexRow(flex-start, center);
+    } @else {
+        @include flexRow(flex-start, center, row-reverse);
+    }
+    margin-bottom: 0.5em;
+}
+
+.reviewSection-ratingPercentage {
+    @include font(medium, 400, rgba(160, 160, 160, 0.726));
+    margin-top: -4px;
+    @if $language == en {
+        margin-left: 0.5em;
+    } @else {
+        margin-right: 0.5em;
+    }
+}
+
+.reviewSection-showMore {
+    padding-top: 1.6em;
+    @include flexRow(center, center);
+    border-bottom: 0.1em solid $primaryColor;
+    align-items: center;
+    @include font(medium, 400, $primaryColor);
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+//////////////////////
+
+.Reviewcard-mainContainer {
+    @if $language == en {
+        @include flexColumn(flex-start, center);
+    } @else {
+        @include flexColumn(flex-end, center);
+    }
+    border-bottom: solid 1px rgba(190, 190, 190, 0.658);
+    width: 100%;
+}
+
+.ReviewCard-topContainer {
+    @if $language == en {
+        @include flexRow(center, flex-start);
+        padding: 0em 1em 1em 1em;
+    } @else {
+        @include flexRow(center, flex-start, row-reverse);
+        padding: 0em 1em 1em 1em;
+    }
+    @include boxSizing;
+    height: 6.5em;
+    width: 100%;
+}
+
+.ReviewCard-img{
+    min-width: 4.5em;
+    max-width: 4.5em;
+    height: 4.5em;
+    border-radius: 50%;
+    object-fit: cover;
+    @include boxSizing;
+}
+
+.reviewCard-Avatar {
+    min-width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: rgb(218, 218, 218);
+    @include font(large, 400, $darkGreyTextColor);
+    text-transform: uppercase;
+    @include boxSizing;
+    @include flexRow(center, center);
+    @media only screen and (min-width: $bp-med) {
+        width: 4em;
+        height: 3.5em;
+    }
+}
+
+.reviewCard-flexRow {
+    @if $language == en {
+        @include flexRow(center, space-between);
+    } @else {
+        @include flexRow(center, space-between, row-reverse);
+    }
+}
+
+.ReviewCard-reviewerInfo {
+    width: 100%;
+    @if $language == en {
+        padding: 1em 0 1em 1em;
+    } @else {
+        padding: 1em 1em 1em 0;
+    }
+}
+
+.ReviewCard-reviewerName {
+    @include font(medium, 600, $darkGreyTextColor);
+    @if $language == en {
+        text-align: left;
+    } @else {
+        text-align: right;
+    }
+    @media only screen and (min-width: $bp-small) {
+        @include font(large, 600, $darkGreyTextColor);
+    }
+}
+.ReviewCard-reviewerfield {
+    @include font(large, 400, $greyTextColor);
+}
+.ReviewCard-reviewerText {
+    @include font(medium, 400, $darkGreyTextColor);
+    @if $language == en {
+        margin-left: 0.6em;
+        text-align: left;
+        direction: rtl;
+        &:after {
+            content: "a";
+            color: transparent;
+        }
+    } @else {
+        margin-right: 0.6em;
+        text-align: right;
+        direction: rtl;
+        &:after {
+            content: "a";
+            color: transparent;
+        }
+    }
+}

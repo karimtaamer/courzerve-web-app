@@ -1,0 +1,118 @@
+.CoursePage-VideoCoverImage {
+  width: 100%;
+  position: absolute;
+  // @media only screen and (min-width: $bp-xl) {
+  //   width: 40%;
+  //   max-height: 18em;
+  // }
+}
+.CoursePage-WhatYoullLearn {
+  width: 100%;
+  @if $language == en {
+    text-align: left;
+  } @else {
+    text-align: right;
+  }
+  @media only screen and (min-width: $bp-med) {
+    width: 45%;
+  }
+}
+.CoursePage-WhatToLearnText {
+ 
+  
+  li:not(:last-child) {
+    margin-bottom: 0.8em;
+  }
+  @include font(1rem, 400, $greyTextColor);
+  @if $language == en {
+    text-align: left;
+    ul{
+      padding-top: 0.2em;
+      padding-left: 1.3em !important;
+    }
+  } @else {
+    ul{
+      padding-right: 1.3em !important;
+    }
+    text-align: right;
+    direction: rtl;
+    &:after {
+      content: "a";
+      color: transparent;
+    }
+  }
+}
+.CoursePage-RowContainer {
+  margin-bottom: 6em;
+  @include flexRow(flex-start, space-between);
+}
+
+.CoursePage-RowContainerAr {
+  margin-bottom: 6em;
+  @include flexRow(flex-start, space-between, row-reverse);
+}
+
+.CoursePage-Desc {
+  @include font(medium, 400, $darkGreyTextColor);
+  margin-top: 6em;
+}
+
+.CoursePage-Disc-Content {
+  @include font(medium, 400, $darkGreyTextColor);
+  @if $language == en {
+    text-align: left;
+  } @else {
+    text-align: right;
+    direction: rtl;
+    &:after {
+      content: "a";
+      color: transparent;
+    }
+  }
+}
+
+.CoursePage-Desc-SeeMore {
+  padding: 0;
+  color: #426aa7;
+  background-color: transparent;
+  border: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.CoursePage-videoCover-container {
+  background-size: cover;
+  width: 42%;
+  height: 15vw;
+  margin-top: 3em;
+  display: none;
+  @media only screen and (min-width: $bp-med) {
+    @include flexRow(center, center);
+    @include boxShadow();
+  }
+}
+
+.playBtn {
+  border-radius: 50%;
+  width: 5em;
+  height: 5em;
+  position: relative;
+  background-color: #5555558c;
+  &:after {
+    font-family: FontAwesome;
+    content: "\f04b";
+    position: absolute;
+    top: 38%;
+    left: 39%;
+    font-weight: 900;
+    font-size: 1.5em;
+    color: $primaryColor;
+  }
+  &:hover {
+    background-color: #838383c4;
+    width: 5.2em;
+    height: 5.2em;
+  }
+  cursor: pointer;
+}

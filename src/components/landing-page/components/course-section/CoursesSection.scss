@@ -1,0 +1,127 @@
+.CourseSection-Title-Container {
+  @include flexColumn(center, flex-start);
+  margin-bottom: 1.5em;
+  margin-top: 5em;
+}
+.CourseSection-Title-H {
+  @include font(x-large, 600, $darkGreyTextColor);
+  margin-bottom: 0.2em;
+  @media only screen and (min-width: $bp-large) {
+    font-size: xx-large;
+  }
+}
+.CourseSection-Title-Divider {
+  height: 0px;
+  width: 3em;
+  border-bottom: solid 0.15em $primaryColor;
+  @media only screen and (min-width: $bp-large) {
+    width: 4em;
+  }
+}
+.CourseSection-Main {
+  display: flex;
+  margin-top: 2em;
+ 
+  @media only screen and (min-width: $bp-large) {
+    padding-right: 3em;
+    padding-left: 3em;
+  }
+  z-index: 0;
+}
+
+#CourseSection-Container {
+  display: flex;
+
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 27em;
+
+  overflow-x: auto;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    width: 0px; /* Remove scrollbar space */
+    background: transparent; /* Optional: just make scrollbar invisible */
+  }
+  // padding-bottom: 1em;
+  @media only screen and (min-width: $bp-large) {
+    max-width: 90%;
+  }
+}
+.CourseSection-Left-B {
+  background-color: transparent;
+  border: none;
+  color: $primaryColor;
+  font-size: large;
+  display: none;
+
+  &:hover {
+    cursor: pointer;
+    @include buttonGrow(1.5);
+  }
+  &:active,
+  &:focus {
+    outline: 0 !important;
+  }
+  @media only screen and (min-width: $bp-med) {
+    display: block;
+  }
+  @media only screen and (min-width: $bp-large) {
+    font-size: x-large;
+  }
+}
+
+.CourseSection-Right-B {
+  background-color: transparent;
+  border: none;
+  color: $primaryColor;
+  display: none;
+
+  font-size: large;
+
+  &:hover {
+    cursor: pointer;
+    @include buttonGrow(1.5);
+  }
+  &:active,
+  &:focus {
+    outline: 0 !important;
+  }
+  @media only screen and (min-width: $bp-med) {
+    display: block;
+  }
+  @media only screen and (min-width: $bp-large) {
+    font-size: x-large;
+  }
+}
+
+.CourseSection-CategoriesContainer {
+  @include font(0.7rem, 400, $greyTextColor);
+  list-style: none;
+  text-align: center;
+  border-bottom: 1px solid rgba(181, 186, 184, 0.52);
+  margin: 0;
+  padding-bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  max-width: 100%;
+  @include boxSizing;
+  padding-right: 2em;
+  @media only screen and (min-width: $bp-med) {
+    font-size: medium;
+  }
+}
+
+.CourseSection-CategoriesContainer-Item {
+  padding-bottom: 0.5em;
+  margin-right: 1em;
+  @include boxSizing;
+  display: inline-block;
+  &:active,
+  &:hover {
+    color: $primaryColor;
+    cursor: pointer;
+    @include buttonShrink(0.93);
+  }
+}

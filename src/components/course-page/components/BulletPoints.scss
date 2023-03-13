@@ -1,0 +1,37 @@
+
+.BulletPoint-Point {
+    
+    @if $language == "en"{
+      @include flexRow();
+    } @else {
+      @include flexRow(flex-start, flex-start,row-reverse);
+    }
+    margin-top: 1.5em;
+}
+
+.BulletPoint-Dot {
+  min-height: 5px;
+  min-width: 5px;
+  background-color: $greyTextColor;
+  @if $language == en {
+    margin-right: 0.4em;
+  } @else {
+    margin-left: 0.4em;
+  }
+  
+
+  border-radius: 50%;
+  margin-top: 0.55em;
+}
+
+.BulletPoint-T {
+    @include font(1rem, 400, $greyTextColor);
+    @if $language == "ar" {
+      text-align: right;
+      direction: rtl;
+      &:after {
+        content: "a";
+        color: transparent;
+      }
+    }
+  }

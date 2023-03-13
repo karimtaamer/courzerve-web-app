@@ -1,0 +1,235 @@
+.main-pricingCard{
+    width: 250px;
+    height: 42vh;
+    border-radius: 0.6em;
+    box-shadow: 2px 4px 10px 4px #4e4e4e32;
+    // border: 0.1em solid $primaryColor;
+    margin: 0 0.6em;
+    @include flexColumn(center, start);
+    @media only screen and (min-width: $bp-med) {
+        height: 51vh;
+        margin: 0 0.75em;
+        box-shadow: rgba(0, 0, 0, 0.3) 0px 12px 18px, rgba(0, 0, 0, 0.22) 0px 7px 8px;
+    }
+}
+
+.percentage-pricingCard{
+    background-color: rgba(224, 224, 224, 0.808);
+    border: solid 0.1em $primaryColor;
+    border-radius: 1em;
+    @include font(small, 600, $primaryColor);
+    padding: 0 1em;
+    @media only screen and (min-width: $bp-med) {
+        @include font(0.8rem, 600, $primaryColor);
+    }
+}
+
+.firstPricingContainer{
+    @if $language == en {
+        @include flexRow(Center, start)
+    }@else {
+        @include flexRow(Center, start, row-reverse)
+    }
+    padding-bottom: 0.5em;
+    margin: 0.4em 0.8em 0 0.8em;
+}
+
+.firstPricingSubContainer{
+    @include flexColumn(center,center);
+    @if $language == en {
+      margin-left: 0.6em;
+    }@else {
+        margin-right: 0.6em;
+    }
+}
+.image-pricingCard{
+   
+    width: 30%;
+    @media only screen and (min-width: $bp-med) {
+        margin-top: 0.8em;
+    }
+}
+
+.title-pricingCard{
+    @include font(0.9rem, 600, $darkGreyTextColor);
+    margin: 0;
+
+    @if $language == ar {
+        text-align: right;
+        direction: rtl;
+    }@else {
+        text-align: left;
+    }
+    @media only screen and (min-width: $bp-med) {
+        @include font(1rem, 400, $darkGreyTextColor);
+       
+    }
+}
+
+.price-pricingCard{
+    @if $language == en {
+        @include flexRow(center, center);
+        text-align: left;
+    } @else {
+        @include flexRow(center, center, row-reverse);
+        text-align: right;
+    }
+    @include font(1.4rem, bold, $primaryColor);
+    margin: 0;
+    @media only screen and (min-width: $bp-med) {
+        @include font(x-large, bold, $primaryColor);
+    }
+}
+.text-pricingCard{
+    @if $language == en {
+        @include flexRow(center, center);
+        text-align: left;
+    } @else {
+        @include flexRow(center, center, row-reverse);
+        text-align: right;
+        direction: rtl;
+    }
+    @include font(0.8rem, 400, $greyTextColor);
+    margin-bottom: 1em;
+    @media only screen and (min-width: $bp-med) {
+        @include font(0.95em, 400, $greyTextColor);
+        margin-bottom: 0.8em;
+    }
+}
+
+.icon-pricingCard{
+    width: 3em;
+    height: 3em;
+    margin-right: 0.2em;
+    
+}
+
+.main-levelContainer{
+    background-color:  #dfdfdfe5;
+    border-radius: 16px;
+    @if $language == en {
+        @include flexRow(center, center);
+    } @else {
+        @include flexRow(center, center, row-reverse);
+    }
+  
+    margin-bottom: 1em;
+}
+
+.Button-PricingLevels{
+    border: none;
+    @include font(small, 600, $greyTextColor);
+  padding: 0;
+  line-height: 1;
+   background-color: transparent;
+    &:focus{
+        outline: none;
+    }
+    &:hover{
+        cursor: pointer;
+    }
+    @media only screen and (min-width: $bp-med) {
+        @include font(large, 600, $greyTextColor);
+        line-height: 1;
+    }
+}
+
+.Button-PricingLevelsClicked{
+    border: none;
+    @include font(small, 600, $primaryColor);
+    padding: 0 0.4em 0 0.4em;
+    background-color: transparent;
+    &:focus{
+        outline: none;
+    }
+    &:hover{
+        cursor: pointer;
+    }
+    @media only screen and (min-width: $bp-med) {
+        @include font(large, 600, $primaryColor);
+    }
+}
+
+.PricingLevels{
+    border: none;
+   
+    @if $language == en {
+        @include flexRow(center, center);
+    } @else {
+        @include flexRow(center, center, row-reverse);
+    }
+    padding: 0.1em 0.2em;
+    margin: 0.3em 0.4em;
+    &:focus{
+        outline: none;
+    }
+}
+
+.PricingLevelsClicked{
+    border: none;
+    background-color: white;
+    border-radius: 10px;
+    margin: 0.3em 0.4em;
+    padding: 0.1em 0.1em;
+    box-shadow: 0 1px 6px 0 #5e5e5e;
+    &:focus{
+        outline: none;
+    }
+}
+
+.main-methods{
+    width: 100%;
+    overflow-x: auto;
+    overflow: auto;
+    // &::-webkit-scrollbar {
+    //     width: 2px !important;
+    //   }
+      
+    //   /* Track */
+    //   &::-webkit-scrollbar-track {
+    //     background: #f1f1f1;
+    //   }
+      
+    //   /* Handle */
+    //   &::-webkit-scrollbar-thumb {
+    //     background: $primaryColor;
+    //      border-radius: 8px;
+    //   }
+}
+
+.pricingMain{
+    margin:1em 0.2em 0.5em 0.2em;
+    @include flexColumn(center, center);
+    @media only screen and (min-width: $bp-med) {
+        margin:1em 0.6em 0.5em 0.6em;
+    }
+}
+
+.mainBenefitsContainer{
+    padding: 0.4em 0.2em 0.8em 0.2em;
+    margin: 0.4em 0.8em 0.4em 0.8em;
+    height: inherit;
+    width: -webkit-fill-available;
+    border-bottom: 0.1em solid #c0c0c094;
+    border-top: 0.1em solid #c0c0c094;
+    overflow-y: auto;
+    
+    @if $language == "en" {
+        @include flexColumn(flex-start, flex-start)
+    } @else {
+        @include flexColumn(flex-end, flex-start)
+    }
+   @include boxSizing;
+   @media only screen and (min-width: $bp-med) {
+    margin-bottom: 0.4em 0.8em 0.6em 0.8em;
+   }
+}
+
+.checkBenefit{
+    color: #416aa6;
+    @if $language == "en" {
+        margin-right: 0.6em
+    } @else{
+        margin-left: 0.6em
+    }
+}

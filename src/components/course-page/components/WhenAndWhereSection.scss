@@ -1,0 +1,114 @@
+.whenWhereSection-mainContainer{
+
+}
+
+.whenWhereSection-Title{
+    @include font(xx-large, 600, $darkGreyTextColor);
+    @if $language == "ar" {
+        text-align: right;
+    }
+}
+
+.whenWhereSection-subcontainer{
+    @if $language == "en"{
+        @include flexRow(flex-start, space-around);
+    } @else {
+        @include flexRow(flex-start, space-around, row-reverse);
+    }
+       
+        margin: 2em 0 1em 0;
+}
+
+.whenWhereImg{
+     width: 3em;
+    @media only screen and (min-width: $bp-med) {
+       width: 5em ;
+     }
+}
+.whenWhereSection-subcontainerInit{
+    width: 100%;
+    margin: 1em 0 3em 0;
+
+}
+
+.whenWhereSection-parts{
+    @include flexColumn(center , center);
+}
+
+.whenWhereSection-sectionTitle{
+    @include font(medium, 600, $darkGreyTextColor);
+    text-align: center;
+    margin-top: 0.8em;
+    @media only screen and (min-width: $bp-med) {
+    @include font(x-large, 600, $darkGreyTextColor);
+    margin-top: 0.8em;
+    }
+}
+
+.whenWhereSection-Info{
+    @include font(small, 400, $greyTextColor);
+    margin-top: 1em;
+    text-align: center;
+    @media only screen and (min-width: $bp-med) {
+    @include font(medium, 400, $greyTextColor);
+    margin-top: 1em;
+    }
+}
+
+.whenWhereSection-whenBtn{
+    border:none;
+  color: $primaryColor;
+  text-decoration: underline;
+  background-color: transparent;
+  margin: 1em 0 0 0;
+  padding: 0;
+}
+
+.whenWhereSection-LocationContainer{
+    @include flexRow( center, flex-start);
+    flex-wrap: wrap;
+    width:100%;
+}
+.whenWhereSection-subTitle{
+    @include font(large, 400, rgba(87, 87, 87, 0.678));
+    margin-bottom: 1em;
+    @if $language == "ar"{
+        text-align: right;
+    }
+}
+
+.whenWhereSection-LocationBtn{
+    @include font (large, 400, $greyTextColor);
+    border: none;
+    border-radius: 16px;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    padding: 0.5em 1em 0.5em 1em;
+    background-color: rgba(218, 218, 218, 0.418);
+  
+    &:hover{
+        cursor: pointer;
+        @include buttonGrow(1.15)
+    }
+    &:focus{
+        outline: none;
+    }
+}
+
+.whenWhereSection-locationBtnSelected{
+    @include font (large, 400, white);
+    border: none;
+    border-radius: 16px;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    padding: 0.5em 1em 0.5em 1em;
+    background-color: $primaryColor;
+  
+    &:hover{
+        cursor: pointer;
+        @include buttonGrow(1.2)
+    }
+    &:focus{
+        outline: none;
+    }
+}

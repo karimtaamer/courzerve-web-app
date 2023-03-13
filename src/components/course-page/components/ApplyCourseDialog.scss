@@ -1,0 +1,280 @@
+.applyCourseDialog-overLay {
+    z-index: 50;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    overflow: auto;
+    transform: translate(-50%, -45%);
+    border: none;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 1px 2px 2px 2px rgba(167, 167, 167, 0.329);
+    width: 18em;
+    min-height: 30em;
+    padding: 0.7em 0.3em;
+    @media only screen and (min-width: $bp-med) {
+        padding: 1em 1.8em 1em 1.8em;
+        transform: translate(-50%, -50%);
+        width: 30%;
+        max-height: 83%;
+    }
+    @media only screen and (max-height: 720px) {
+        overflow: auto;
+        padding: 1em 2em 1em 2em;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+.pricingCourseDialog-overLay {
+    z-index: 50;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    overflow: auto;
+    transform: translate(-50%, -48%);
+    border: none;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 1px 2px 2px 2px rgba(167, 167, 167, 0.329);
+    width: 20em;
+    min-height: 30em;
+    padding: 0.4em 0.6em;
+    @media only screen and (min-width: $bp-med) {
+        padding: 1em 1.8em 1em 1.8em;
+        transform: translate(-50%, -50%);
+        width: auto;
+        max-height: 85%;
+    }
+    @media only screen and (max-height: 720px) {
+        overflow: auto;
+        // padding: 1em 2em 1em 2em;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+.applyCourseDialog-overLay::-webkit-scrollbar {
+    width: 0px;
+  }
+
+
+.applyDialog-CloseBtn {
+    position: fixed;
+    right: 0;
+    margin-top: 0.4em;
+    margin-right: 0.5em;
+    color: rgba(190, 190, 190, 0.658);
+    font-size: 1.3em;
+    border: none;
+    z-index: 100;
+    @media only screen and (min-width: $bp-med) {
+        margin-top: 0;
+        font-size: 1.4em;
+    }
+    &:focus {
+        outline: none;
+    }
+    cursor: pointer;
+    &:hover {
+        @include buttonShrink(0.8);
+        color: $greyTextColor;
+    }
+}
+
+.ApplyCourseDialog-FirstSubContainer {
+    margin-bottom: 1em;
+    @include boxSizing;
+}
+
+.ApplyCourseDialog-SubContainer-Title {
+      @include font(large, 400, $darkGreyTextColor);
+      @if $language == "en"{
+        text-align: left;
+      } @else {
+        text-align: right;
+      }
+   
+    @media only screen and (min-width: $bp-med) {
+        @include font(medium, 400, $darkGreyTextColor);
+    }
+}
+
+.ApplyCourseDialog-InputsContainer {
+    @include flexColumn(center, center);
+    margin-top: 1.4em;
+    width: 100%;
+}
+
+.ApplyCourseDialog-rowInputContainer {
+    @if $language == en {
+        @include flexRow(flex-start, space-between);
+    } @else{
+        @include flexRow(flex-start, space-between, row-reverse);
+    }
+    
+    width: 103%;
+    margin-bottom: 1.2em;
+    @if $language == ar {
+        @include flexRow(flex-start, space-between, row-reverse);
+    }
+}
+.ApplyCourseDialog-rowInput {
+    min-width: 45%;
+    width: 45%;
+    min-height: 2.1em;
+    border-radius: 6px;
+    border: solid 0.07em #868686cc;
+    @if $language == "en" {
+        padding-left: 0.5em;
+    }  @else {
+        padding-right: 0.5em;
+        text-align: right;
+    }
+    &::placeholder {
+        @include font(small, 400, #868686cc);
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+.ApplyCourseDialog-Input {
+    min-width: 100%;
+    min-height: 2.1em;
+    border-radius: 6px;
+    border: solid 0.07em #868686cc;
+    margin-bottom: 1.6em;
+    
+    @if $language == "en" {
+        padding-left: 0.5em;
+    }  @else {
+        padding-right: 0.5em;
+        text-align: right;
+    }
+    &::placeholder {
+        @include font(small, 400, #868686cc);
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+.ApplyCourseDialog-InputArea {
+    width: 100%;
+    height: 6em;
+    border-radius: 6px;
+    border: solid 0.07em #868686cc;
+    margin-bottom: 1.6em;
+    resize: none;
+    padding-top: 0.2em;
+    @if $language == "en" {
+        padding-left: 0.5em;
+    }  @else {
+        padding-right: 0.5em;
+        text-align: right;
+    }
+    @include font(medium, 400, #868686cc);
+    &::placeholder {
+        @include font(small, 400, #868686cc);
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+.applyDialog-LocationSubtitle {
+    @include font(medium, 400, $greyTextColor);
+    text-align: left;
+    margin-top: 0.5em;
+}
+
+.ApplyCourseDialog-promoCode-Container {
+    @include flexRow(center, flex-start);
+    margin-top: 2em;
+    margin-bottom: 0.7em;
+    @if $language == ar {
+        @include flexRow(center, flex-start, row-reverse);
+    }
+}
+
+.ApplyCourseDialog-promoCode-checkboxText {
+    @include font(large, 400, $darkGreyTextColor);
+}
+
+.BulletPoint-Dots {
+    width: 2em;
+    @if $language == "en"{
+        margin-left: 0;
+    } @else {
+        margin-left: auto;
+    }
+} 
+
+.multi-select {
+    --rmsc-primary: $primaryColor;
+    --rmsc-hover: rgba(190, 190, 190, 0.459);
+    --rmsc-border: #ccc;
+    --rmsc-gray: #aaa;
+    --rmsc-background: #fff;
+    --rmsc-border-radius: 6px;
+    --rmsc-height: 2em;
+    margin-top: 0.4em;
+    font-size: small;
+    text-align: left;
+}
+
+.ApplyCourseDialog-ApplyBtn {
+    background-color: $primaryColor;
+    padding: 0.7em 2.5em;
+    @include button(#ffffff, 0.6em, 0.4em);
+    @include font(1rem, 400);
+    width: 100%;
+    margin-top: 1.5em;
+    margin-bottom: 0.7em;
+    margin-left: auto;
+    cursor: pointer;
+    &:hover {
+        @include buttonShrink(0.9);
+    }
+}
+
+.succ{
+    width: 65%;
+    padding: 0.7em 1.5em;
+    margin-top: 0.4em;
+    @media only screen and (min-width: $bp-med) {
+        width: 40%;
+        margin-top: 1.5em;
+    }
+}
+
+.dd-Container{
+    width: 103%;
+    height: 1em;
+}
+.dd-Controler{
+    @if $language == "en"{
+        text-align: start;
+        } @else {
+            text-align: end;
+        }
+    @include font(small, 400, #868686cc);
+    border-radius: 6px;
+    border: solid 0.07em #868686cc;
+}
+.dd-menu{
+    @if $language == "en"{
+        text-align: start;
+        } @else {
+            text-align: end;
+        }
+    @include font(medium, 400, $primaryColor);
+    height: 10em;
+    margin-top: 1em;
+    border-radius: 0 0 6px 6px;
+    border: solid 0.07em #868686cc;
+}

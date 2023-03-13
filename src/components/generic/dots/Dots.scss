@@ -1,0 +1,10 @@
+.Dots-Container{
+    @include flexRow(center, space-between);
+    
+}
+.Dots-Dot{
+    min-height: 5px;
+    min-width: 5px;
+    border-radius: 50%;
+    display: inline-block;  
+}

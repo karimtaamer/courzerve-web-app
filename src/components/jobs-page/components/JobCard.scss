@@ -1,0 +1,119 @@
+.JobCard-Container {
+  width: 90%;
+  max-height: 3em;
+  margin-top: 1.2em;
+  background-color: white;
+  -webkit-box-shadow: 0px 6px 10px -2px rgba(0, 0, 0, 0.171);
+  -moz-box-shadow: 0px 6px 10px -2px rgba(0, 0, 0, 0.171);
+  box-shadow: 0px 6px 10px -2px rgba(0, 0, 0, 0.171);
+  padding: 0.8em;
+  border-radius: 0.8em;
+  @include flexRow(center, flex-start);
+  @include borderFadeIn;
+  &::before {
+    @include borderFadeInBefore(1em);
+  }
+  &:active:before,
+  &:focus:before,
+  &:hover:before {
+    @include borderFadeInHover(2px);
+    cursor: pointer;
+  }
+
+  @media only screen and (min-width: $bp-med) {
+    max-height: 5em;
+  }
+  @media only screen and (min-width: $bp-large) {
+    height: 3em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.JobCard-Opened-Container {
+  width: 90%;
+  min-height: 7em;
+  margin-top: 1em;
+  background-color: $primaryColor;
+  padding: 0.8em;
+  border-radius: 0.8em;
+  -webkit-box-shadow: 0px 6px 10px -2px rgba(0, 0, 0, 0.171);
+  -moz-box-shadow: 0px 6px 10px -2px rgba(0, 0, 0, 0.171);
+  box-shadow: 0px 6px 10px -2px rgba(0, 0, 0, 0.171);
+  @include flexColumn(center, flex-start);
+
+  @media only screen and (min-width: $bp-large) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.JobCard-Opened-Top-Container {
+  @include flexRow(center, flex-start);
+  width: 100%;
+  padding-bottom: 0.8em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.486);
+  &:active,
+  &:focus,
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.JobCard-Img {
+  font-size: large;
+  margin-right: 1em;
+  color: $darkGreyTextColor;
+  @media only screen and (min-width: $bp-med) {
+    font-size: x-large;
+  }
+  @media only screen and (min-width: $bp-large) {
+    font-size: xx-large;
+  }
+}
+.JobCard-Title {
+  @include font(medium, 600, $darkGreyTextColor);
+  @media only screen and (min-width: $bp-med) {
+    font-size: large;
+  }
+}
+.JobCard-Arrow {
+  margin-left: auto;
+  color: $primaryColor;
+}
+.JobCard-Opened-Text-Container {
+  @include font(medium, 400, white);
+  width: 100%;
+  @include flexColumn();
+ 
+ 
+  padding-bottom: 0.8em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.486);
+  &:active,
+  &:focus,
+  &:hover {
+    cursor: pointer;
+  }
+}
+.JobCard-Opened-Text-H {
+  @include font(medium, 600, white);
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+.JobCard-Opened-Text-P {
+  @include font(small, 400, white);
+  margin-top: 0.4em;
+    &::before{
+      content: "- ";
+  }
+}
+.JobCard-Button {
+  background-color: white;
+  padding: 0.5em 2em 0.5em 2em;
+  @include button($primaryColor, 0.6em, 0.3em);
+  @include font(0.9rem, 600, $primaryColor);
+  margin-top: 1em;
+  max-height: 2.5em;
+  cursor: pointer;
+  &:hover{
+    @include buttonShrink(0.94)
+  }
+}

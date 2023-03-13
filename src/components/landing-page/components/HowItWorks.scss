@@ -1,0 +1,94 @@
+.HowItWorks-Main{
+  @include flexColumn(center,flex-start);
+  @include mainPadding
+}
+
+.HowItWorks-StepMainContainer{
+    width: 100%;
+    margin-top: 3em;
+    
+    @media only screen and (min-width: $bp-large) {
+        width: 80%;
+      }
+      @media only screen and (min-width: $bp-xxl) {
+        width: 70%;
+      }
+}
+
+.HowItWorks-StepImg{
+    width: 35%;
+    @media only screen and (min-width: $bp-med) {
+        min-width: 30%;
+      }
+      
+}
+.HowItWorks-StepContainer{
+    width: 50%;   
+  @if $language == "en" {
+    @include flexRow(center, flex-start)
+  } @else {
+    @include flexRow(center, flex-start, row-reverse)
+  }
+}
+.HowItWorks-NumberCircle{
+background-color: $primaryColor;
+min-height: 1.5em;
+min-width: 1.5em;
+border-radius: 50%;
+color: white;
+display: none;
+margin-right: 1em;
+margin-left: 0.5em;
+@media only screen and (min-width: $bp-med) {
+    display: flex;
+  }
+  @media only screen and (min-width: $bp-large) {
+    min-height: 2em;
+    min-width: 2em;
+    font-size: large;
+      }
+}
+
+.HowItWorks-textContainer{
+  @if $language == "en" {
+    margin-right: auto;
+  } @else {
+    width: fit-content;
+  }
+}
+
+.HowItWorks-StepTitle{
+@include font(1rem,700,$darkGreyTextColor);
+@if $language == "en" {
+  text-align: left;
+} @else {
+  text-align: right;
+}
+@media only screen and (min-width: $bp-med) {
+font-size: 1.2rem;
+  }
+  @media only screen and (min-width: $bp-large) {
+    font-size: 1.4rem;
+      }
+      @media only screen and (min-width: $bp-xxl) {
+        font-size: 1.7rem;
+          }
+}
+
+.HowItWorks-StepSubTitle{
+    @include font(0.8rem,400,$greyTextColor);
+    @if $language == "en" {
+      text-align: left;
+    } @else {
+      text-align: right;
+    }
+    @media only screen and (min-width: $bp-med) {
+        font-size: 1rem;
+          }
+          @media only screen and (min-width: $bp-large) {
+            font-size: 1.2rem;
+              }
+              @media only screen and (min-width: $bp-xxl) {
+                font-size: 1.5rem;
+              }
+}

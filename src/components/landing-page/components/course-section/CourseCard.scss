@@ -1,0 +1,116 @@
+.CourseCard-Main {
+  display: flex;
+  flex-direction: column;
+  min-width: 18em;
+  max-width: 19em;
+  margin-right: 1em;
+  height: 22em;
+}
+
+.CourseCard-Main-commingSoon{
+  display: flex;
+  flex-direction: column;
+  min-width: 17em;
+  max-width: 19em;
+  margin-right: 1em;
+  height: 22em;
+  background-color: rgba(211, 211, 211, 0.548);
+  border-radius: 0.8em;
+}
+
+.CourseCard-Container {
+  @if $language == en {
+    @include flexColumn(flex-start, flex-start);
+  } @else {
+    @include flexColumn(flex-start, flex-end);
+  }
+  max-width: 100%;
+  -webkit-box-shadow: 0px 4px 6px #4e4e4e32;
+  -moz-box-shadow: 0px 4px 6px #4e4e4e32;
+  box-shadow: 0px 4px 6px #4e4e4e32;
+  margin-top: 0 !important;
+  -webkit-border-radius: 0em 0em 1em 1em;
+  -moz-border-radius: 0em 0em 1em 1em;
+  border-radius: 0em 0em 1em 1em;
+  position: relative;
+  border-top: 2px solid $primaryColor;
+  height: 10em;
+  padding: 1.8em 0.5em 0.8em 0.5em;
+  @include boxSizing;
+}
+.CourseCard-Image {
+  @include flexRow(center, center);
+  background-size: cover;
+  height: 12em;
+  width: 100%;
+   background-repeat: no-repeat;
+  // background-size: 100% 100%;
+  -webkit-border-radius: 1em 1em 0em 0em;
+  -moz-border-radius: 1em 1em 0em 0em;
+  border-radius: 1em 1em 0em 0em;
+  border: none;
+  margin-bottom: 0px !important;
+}
+
+.CourseCard-Instructor-Image {
+  height: 3.5em;
+  width: 3.5em;
+  border-radius: 1em;
+  position: absolute;
+  @if $language == "en" {
+    left: 3%;
+  } @else {
+    right: 3%;
+  }
+  top: -2.5em;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow: 0px 4px 6px #4e4e4e32;
+  -moz-box-shadow: 0px 4px 6px #4e4e4e32;
+  box-shadow: 0px 4px 6px #4e4e4e32;
+  -webkit-transform: translateX(-3%);
+  transform: translateX(-3%);
+}
+.CourseCard-Instructor-Name {
+  @include overflow(16px, 1);
+  font-family: "Nunito Sans";
+  margin: 0;
+  color: $greyTextColor;
+  @if $language == "ar" {
+    align-self: flex-end;
+  }
+}
+
+.CourseCard-Name {
+  @include overflow(25px, 2);
+  @include font(18px, 600, $darkGreyTextColor);
+  margin-top: 0.3em;
+  line-height: 1.4;
+  @if $language == "ar" {
+    align-self: flex-end;
+    text-align: right;
+    direction: rtl;
+    &:after {
+      content: "a";
+      color: transparent;
+    }
+  }
+}
+
+.CourseCard-BottomItemContainer {
+  @include font(medium, 600, $primaryColor);
+  height: 1.2em;
+  @if $language == en {
+    margin-left: auto;
+    @include flexRow(center, flex-start);
+  } @else {
+    margin-right: auto;
+    @include flexRow(center, flex-start, row-reverse);
+  }
+ 
+  margin-top: auto;
+  &:hover,
+  &:focus {
+    @include buttonShrink(0.9);
+    cursor: pointer;
+  }
+}

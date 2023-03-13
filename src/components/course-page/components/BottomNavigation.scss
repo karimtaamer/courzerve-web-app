@@ -1,0 +1,63 @@
+.CourseBottom-Container {
+  @include flexRow(flex-start, space-between);
+  width: 100%;
+  position: fixed;
+  height: 2.5em;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(255, 255, 255);
+  -webkit-box-shadow: 0px -3px 8px -1px rgba(0, 0, 0, 0.171);
+  -moz-box-shadow: 0px -3px 8px -1px rgba(0, 0, 0, 0.171);
+  box-shadow: 0px -3px 8px -1px rgba(0, 0, 0, 0.171);
+}
+.CourseBottom-SubContainer {
+  @include flexRow(flex-start, flex-start);
+  @if $language == ar {
+    @include flexRow(flex-start, flex-start, row-reverse);
+  }
+  @include font(0.9rem, 600, $darkGreyTextColor);
+  margin-left: 30%;
+  height: 100%;
+}
+.CourseBottom-Item {
+  border-top: 4px solid $primaryColor;
+  @include flexColumn(center, center);
+  height: 90%;
+  text-align: center;
+  margin-right: 2em;
+}
+.CourseBottom-Item-NotChosen {
+  @include flexColumn(center, center);
+  height: 100%;
+  color: $greyTextColor;
+  text-align: center;
+  margin-right: 2em;
+ 
+  &:active,
+  &:focus,
+  &:hover {
+    cursor: pointer;
+    color: $primaryColor;
+    @include buttonShrink(0.93);
+  }
+}
+.CourseBottom-Arrow-Container {
+  margin-left: auto;
+  margin-right: 7%;
+}
+
+.CourseBottom-Arrow {
+  color: $primaryColor;
+  background: transparent;
+  border: none;
+  font-size: 2.4rem;
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  &:active,
+  &:focus,
+  &:hover {
+    @include buttonShrink(1.12);
+    cursor: pointer;
+  }
+}

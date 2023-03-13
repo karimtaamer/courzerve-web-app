@@ -1,0 +1,197 @@
+.allCoursePage-mainContainer{
+    height: 100%;
+    text-align: center;
+        min-height: fit-content;
+        margin-bottom: 2em;
+        padding-bottom: 2em;
+}
+
+.allCoursePage-main{
+    padding: 2em 4% 3em 4%;
+    @media only screen and (min-width: $bp-med) {
+      padding: 2em 8% 3em 8%;
+    }
+    margin-bottom: 2em;
+}
+
+.allCoursePage-topContainer{
+    @include UpperContainer();
+    margin-bottom: 2em;
+    background-image: url(../../../assets/icons/allCourse/allCourse-background-mobile.png);
+    @media only screen and (min-width: $bp-med) {
+        background-image: url(../../../assets/icons/allCourse/AllCourse-background.png);
+      }
+}
+
+.jobs-MainContainer {
+    min-height: fit-content;
+    margin-bottom: 2em;
+    padding-bottom: 1em;
+    @include flexColumn(center, flex-start);
+  }
+
+.allCourseCard-mainContainer{
+    height: 9em;
+    margin-bottom: 2em;
+    width: 100%;
+    border-radius: 1em;
+    margin-top: 1em;
+    @include boxShadow;
+    @include boxSizing;
+    @media only screen and (min-width: $bp-med) {
+        height: 13em;
+      }
+}
+
+.allCourseCard-courseImg{
+width: 32%;
+height: 100%;
+border-radius: 1em 0 0 1em;
+@media only screen and (min-width: $bp-med) {
+    width: 28%;
+  }
+}
+
+.allCourseCard-RightContainer{
+    padding: 0.4em 0.5em 0.4em 0.5em;
+    width: 100%;
+    @media only screen and (min-width: $bp-med) {
+        padding: 0.4em 1em 0.3em 1em;
+      }
+}
+.allCourseCard-topContainer{
+    width: 100%;
+    justify-content: space-between;
+    margin: 0;
+}
+.allCourseCard-topContainer-left{
+    text-align: left;
+}
+.allCourseCard-topContainer-right{
+    text-align: right;
+}
+
+
+
+.allCourseCard-title{
+    @include font(large, 600, black);
+    @include overflow(15px, 1);
+    margin-right: 1em;
+    @media only screen and (min-width: $bp-med) {
+        @include overflow(18px, 1);
+        margin-right: 2em;
+      }
+}
+.allCourseCard-category{
+    @include font(small, 200, $primaryColor);
+    @media only screen and (min-width: $bp-med) {
+        @include font(medium, 400, $primaryColor);
+      }
+}
+
+.allCourseCard-discription{
+    text-align: left;
+
+    @include overflow(18px, 2, 1.2);
+    @include font(small, 100, $greyTextColor);
+    @media only screen and (min-width: $bp-med) {
+        @include overflow(19px, 3, 1.1);
+        @include font(medium, 100, $greyTextColor);
+      }
+}
+
+.searchicon{
+    // padding: 10px; 
+    min-width: 40px; 
+    position: absolute;
+    top: 12px;
+    right: 0;
+}
+
+
+
+.allCourseCard-instructorContainer{
+    @include flexRow(center, flex-start);
+    margin-top: 1em;
+    @media only screen and (min-width: $bp-med) {
+       padding-top: 0.2em;
+      }
+   
+}
+
+
+.allCourseCard-instructorInfo-container{
+    margin-left: 1em;
+    text-align: left;
+    margin-right: auto;
+}
+
+
+.allCourseCard-instructorName{
+    @include font(small, 400, $darkGreyTextColor);
+    @include overflow(14px, 1);
+    @media only screen and (min-width: $bp-med) {
+        @include font(medium, 600, $darkGreyTextColor);
+        @include overflow(17px, 1);
+       }
+}
+
+.allCourseCard-instructoJobTitles{
+    @include font(x-small, 400, $darkGreyTextColor);
+    @include overflow(11px, 1);
+    @media only screen and (min-width: $bp-med) {
+        @include font(small, 400, $darkGreyTextColor);
+        @include overflow(14px, 1);
+       }
+}
+
+.allCoursesPage-applySection-InstructorImg{
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    @include boxShadow;
+    @media only screen and (min-width: $bp-med) {
+        height: 3em;
+        width: 3em;
+       }
+}
+
+.allCoursesPage-mainContainer{
+    width: 30vw;
+    height: 2em;
+    position: relative;
+    display: flex;
+    margin-bottom: 3em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.allCoursesPage-search{
+    border: solid 2px rgba(216, 216, 216, 0.699);
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    @include font(medium, 400, $greyTextColor);
+    padding-left: 1em;
+    &:focus{
+        outline: none;
+    }
+}
+.allCourseCard-btn{
+    justify-self: flex-end;
+    padding: 0.4em 1.2em 0.4em 1.2em;
+    @include font(small, 200, white);
+    @include button(white, 0.5em ,0.3em);
+    &:after{
+        margin-left: 4px;
+        content: ">>";
+    }
+    &:hover{
+        @include buttonShrink(0.9)
+    }
+    @media only screen and (min-width: $bp-med) {
+        padding: 0.4em 1.8em 0.4em 1.8em;
+    @include font(medium, 400, white);
+    @include button(white, 0.7em ,0.5em);
+       }
+}

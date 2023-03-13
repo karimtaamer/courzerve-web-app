@@ -1,0 +1,99 @@
+.CounterSection-mainContainer{
+        margin-top: 2em;
+         background-image: url(../../../assets/icons/landing/CounterSectionMobile.png);
+        min-width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+         height: 50em;
+        @media only screen and (min-width: $bp-med) {
+          background-image: url(../../../assets/icons/landing/CounterSectionMed.png);
+          height: 17em;
+        }
+        @media only screen and (min-width: $bp-large) {
+          height: 18em;
+        }
+        @media only screen and (min-width: $bp-xl) {
+          background-image: url(../../../assets/icons/landing/CounterSectionMed.png);
+          height: 20em;
+        }
+}
+
+.CounterSection-Dots{
+    width: 2em;
+    margin-right: auto;
+    margin-left: auto;
+    @media only screen and (min-width: $bp-med) {
+       margin: 0;
+      }
+}
+
+
+
+.CounterSection-Title{
+    @include font(xx-large, 400)
+}
+
+.CounterSection-mainCont{
+  margin-top: 2em;
+  @include flexColumn(center, center);
+  @media only screen and (min-width: $bp-med) {
+    @include flexRow(center, center)
+   }
+}
+
+
+.CounterSection-CounterContainer{
+width: 13em;
+height: 11.6em;
+text-align: center;
+@include boxSizing;
+padding: 2em auto 1em auto;
+text-align: center;
+     border: solid 1px $darkGreyTextColor;
+    background-color: rgba(255, 255, 255, 0.85);
+    @media only screen and (min-width: $bp-med) {
+        width: 11em;
+        height: 10.5em;
+        margin:0;
+      }
+      @media only screen and (min-width: $bp-large) {
+        width: 12.5em ;
+        height: 11em ;
+      }
+      @media only screen and (min-width: $bp-xl) {
+        width: 14em;
+        height: 11.2em;
+      }
+
+}
+.st{
+  border-radius: 14px 14px 0 0;
+  @media only screen and (min-width: $bp-med) {
+    border-radius: 14px 0 0 14px;
+   }
+}
+.nd{
+  background-color: #222222d8;
+}
+.rd{
+  border-radius: 0 0 14px 14px;
+  @media only screen and (min-width: $bp-med) {
+    border-radius: 0 14px 14px 0;
+   }
+}
+
+
+.CounterSection-Counter{
+    @include font(xx-large, 600, #222222d8);
+    margin-top: 0.5em;
+    animation-duration: 100s;
+}
+
+.CounterSection-CounterTitle{
+@include font(large, 600, #222222d8);
+margin-bottom: 0.6em;
+}
+
+.md{
+  color: rgba(255, 255, 255, 0.85);
+}

@@ -1,0 +1,127 @@
+html,
+body,
+#root {
+  background-color: #fdfdfd;
+  margin: 0;
+  padding: 0;
+}
+
+
+.main {
+  padding: 2em 4% 3em 4%;
+  @media only screen and (min-width: $bp-med) {
+    
+    @if $language == "en" {
+      padding: 2em 8% 3em 30%;
+    } @else {
+      padding: 2em 30% 3em 8%;
+    }
+  }
+  margin-bottom: 2em;
+}
+@mixin mainPadding() {
+  @include boxSizing;
+  padding-left:  4%;
+  padding-right: 4%;
+  @media only screen and (min-width: $bp-med) {
+    padding-left:  8%;
+    padding-right: 8%;
+  }
+}
+.main-title {
+  @include font(x-large, 600, $darkGreyTextColor);
+  @if $language == "ar" {
+    text-align: right;
+  }
+  @media only screen and (min-width: $bp-med) {
+    @include font(xx-large, 600, $darkGreyTextColor);
+
+  }
+}
+
+.main-title-small {
+  @include font(large, 400, $darkGreyTextColor);
+  @media only screen and (min-width: $bp-med) {
+    font-size: x-large;
+  }
+}
+
+.main-dots {
+  @if $language == "en" {
+    margin-left: 0.2em;
+  } @else {
+    margin-left: auto;
+    margin-right: 0.2em;
+  }
+  width: 2em;
+  
+}
+.UpperContainer-title {
+  margin-top: 10vh;
+  @include font(x-large, 600);
+  margin-top: auto;
+  margin-bottom: 1em;
+  @media only screen and (min-width: $bp-med) {
+    font-size: xx-large;
+  }
+}
+
+.flexColumn {
+  @include flexColumn;
+}
+.flexColumnStartCenter {
+  @include flexColumn(flex-start, center);
+}
+.flexColumnStartSpaceBetween {
+  @include flexColumn(flex-start, space-between);
+}
+.flexColumnCenterCenter {
+  @include flexColumn(center, center);
+}
+.flexColumnCenterStart {
+  @include flexColumn(center, flex-start);
+}
+.flexColumnStartStart {
+  @include flexColumn(flex-start flex-start);
+}
+
+.flexRow {
+  @include flexRow;
+}
+.flexRowStartCenter {
+  @include flexRow(flex-start, center);
+}
+.flexRowEndCenter{
+  
+  @include flexRow(flex-end, center);
+}
+.flexRowCenterCenter {
+    @include flexRow(center, center);
+}
+.flexRowCenterStart {
+  @if $language == "en"{
+  @include flexRow(center, flex-start);
+} @else {
+  @include flexRow(center, flex-start, row-reverse);
+}
+}
+.flexRowCenterSpaceBetween {
+  @if $language == "en"{
+  @include flexRow(center, space-between);
+  } @else {
+    @include flexRow(center, space-between, row-reverse);
+  }
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background: $primaryColor;
+  border-radius: 8px;
+}

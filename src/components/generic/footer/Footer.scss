@@ -1,0 +1,108 @@
+.Footer-Container {
+  margin: 0 !important;
+  margin-bottom: 0 !important;
+  padding-left: 4%;
+  padding-right: 4%;
+  bottom: 0px;
+  position: static;
+  clear: both;
+  @include boxSizing;
+  height: 2.7em;
+  width: 100%;
+  background-color: #222222;
+  -webkit-box-shadow: 0px 0 10px rgba(0, 0, 0, 0.178);
+  -moz-box-shadow: 0px 0 10px rgba(0, 0, 0, 0.178);
+  box-shadow: 0px 0 10px rgba(0, 0, 0, 0.178);
+  @include flexRow(center, space-between);
+
+  @media only screen and (min-width: $bp-large) {
+    height: 3.5em;
+
+  }
+}
+.Footer-Logo {
+  width: 25%;
+  @media only screen and (min-width: $bp-med) {
+    width: 12%;
+  }
+  @media only screen and (min-width: $bp-large) {
+    width: 10%;
+  }
+}
+.Footer-SocialMedia-Container {
+  @include flexRow(center, space-between);
+  width: 16%;
+  margin-left: 4%;
+  @media only screen and (min-width: $bp-med) {
+    width: 8%;
+    justify-content: space-around;
+  }
+}
+.Footer-SocialMedia-Circle {
+  background-color: transparent;
+  @include flexColumn(center, center);
+   color: #222222;
+  &:hover {
+    cursor: pointer;
+  }
+  width: 2em;
+  font-size: 1em;
+  text-decoration: none;
+  @media only screen and (min-width: $bp-med) {
+    font-size: x-large;
+  }
+ 
+}
+
+.cr{
+  color: #ffffff;
+    border-radius: 50%;
+   height: 2em;
+}
+
+.Footer-Links-Container {
+  justify-self: flex-end;
+  @include flexRow(center, center);
+  width: 36%;
+  color: white;
+  &:hover {
+    cursor: pointer;
+  }
+  font-size: 0.5rem;
+  text-align: center;
+  font-family: "Nunito Sans";
+  @media only screen and (min-width: $bp-med) {
+    @include flexRow(center, space-between);
+    width: 30%;
+    font-size: 0.8rem;
+  }
+  @media only screen and (min-width: $bp-large) {
+    width: 24%;
+    @include flexRow(center, space-between);
+    font-size: medium;
+  }
+}
+
+.footer-linksonly{
+  @include flexColumn(flex-start, center);
+  @media only screen and (min-width: $bp-med) {
+    @include flexRow(center, space-between);
+    width: 74%;
+  }
+  @media only screen and (min-width: $bp-large) {
+    width: 75%;
+  }
+}
+
+.footer-Language{
+  @include font(small, 400, white);
+  @media only screen and (min-width: $bp-med) {
+    font-size: medium;
+  }
+  @media only screen and (min-width: $bp-large) {
+font-size: large;
+  }
+  &:hover{
+cursor: pointer;
+  }
+}

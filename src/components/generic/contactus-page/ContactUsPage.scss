@@ -1,0 +1,165 @@
+.contactus-mainContainer{
+    @include flexColumn(center, flex-start);
+    height: 100%;
+    text-align: center;
+}
+.test{
+    @include flexColumn(center, flex-start);
+    height: 100%;
+    width: 100%;
+    margin-top: 2em;
+    text-align: center;
+    margin:4%;
+    @media only screen and (min-width: $bp-large) {
+        // @include flexRow(center, space-around);
+        @if $language == "en"{
+            @include flexRow(center, flex-start, row-reverse);
+        } @else {
+            @include flexRow(center, flex-start);
+        }
+        margin-top: 4em;
+
+      }
+}
+
+.contactus-upperContainer{
+    @include UpperContainer();
+    background-image: url(../../../assets/icons/contactus/contactus-background2x.png);
+    @media only screen and (min-width: $bp-med) {
+        background-image: url(../../../assets/icons/contactus/contactus-background.png);
+      }
+}
+.contactus-Dots{
+  width: 2em; 
+}
+
+.contactus-dots-message{
+    width: 2em; 
+    @if $language == "en" {
+        align-self: flex-start;
+    } @else {
+        align-self: flex-end;
+    }
+    
+}
+
+.contactus-message-container{
+    @include flexColumn(center, flex-start );
+    box-shadow: 1px 2px 4px 2px rgba(141, 141, 141, 0.356);
+    border-radius: 16px;
+     width: 80%;
+    min-height: 45vh;
+
+    padding: 1em 1.5em 1em 1.5em;
+    @media only screen and (min-width: $bp-large) {
+         width: 42%;
+    }
+}
+
+.contactus-message-title{
+    @include font(large, 600, black);
+    margin: 0;
+    @if $language == "en" {
+        align-self: flex-start;
+    } @else {
+        align-self: flex-end;
+    }
+    
+}
+
+.contactus-message-input{
+    width: 100%;
+    min-height: 4vh;
+    @include font(medium, 400, $greyTextColor);
+    border: solid 1px #7070709c;
+    border-radius: 6px;
+    margin-top: 2em;
+    padding-left: 8px;
+    @if $language == "en"{
+        text-align: left;
+    } @else {
+        text-align: right;
+    }
+    &::placeholder{
+      padding-left: 2px;
+    }
+}
+.contactus-message-message{
+    width: 100%;
+    border: solid 1px #7070709c;
+    @include font(medium, 400, black);
+    border-radius: 10px;
+    min-height:   14vh;
+    resize: none;
+    display: flex;
+    flex-direction: column;
+    padding: 8px 2px 4px 8px !important;
+    margin-top: 2em;
+    @if $language == "en"{
+        text-align: left;
+    } @else {
+        text-align: right;
+    }
+}
+
+.contactus-detail-container{
+    @if $language == "en"{
+    @include flexColumn(flex-start, flex-start );
+    padding-left: 2em;
+    } @else {
+        @include flexColumn(flex-end, flex-start );
+        padding-right: 2em;
+    }
+     width: 85%;
+    min-height: 45vh;
+    margin-bottom: 1em;
+    
+    @media only screen and (min-width: $bp-large) {
+         width: 42%;
+         margin-top: 1em;
+    }
+}
+
+.contactus-detail-discription{
+    @include font(medium, 400, rgba(126, 126, 126, 0.774));
+    margin: 2em 0 3em 0 !important;
+    width: 90%;
+    @if $language == "en"{
+        text-align: left;
+    } @else {
+        text-align: right;
+    }
+    @media only screen and (min-width: $bp-large) {
+    width: 23em;
+    }
+}
+.contactus-detail-phone-container{
+   
+    @if $language == "en"{
+        @include flexRow(flex-start, flex-start);
+    } @else {
+        @include flexRow(flex-start, flex-start, row-reverse);
+    }
+    margin: 0 0 0.7em 0 !important;
+}
+.contactus-detail-phone{
+    @include font(medium, 400, rgba(126, 126, 126, 0.774));
+    margin: 1px !important;
+}
+
+.contactus-message-submit-btn{
+    background-color: $primaryColor;
+    padding: 0.5em 2.6em 0.5em 2.6em;
+    @include button(#ffffff, 0.7em, 0.5em);
+    @include font(medium, 100, white);
+    margin-top: 1.5em;
+    cursor: pointer;
+    &:hover{
+        @include buttonShrink(0.9)
+    }
+   
+}
+
+.ContactUs-loadingContainer{
+margin-top: 2em;
+}

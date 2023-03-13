@@ -1,0 +1,109 @@
+/*All naming are in terms od x dierction then y,for ex: StartCenter means starts in x and centered in */
+
+@mixin flexRow($alignment: flex-start, $justify: flex-start,$reverse:row) {
+  display: flex;
+  flex-direction: $reverse;
+  align-items: $alignment;
+  justify-content: $justify;
+}
+@mixin flexColumn($alignment: flex-start, $justify: flex-start) {
+  display: flex;
+  flex-direction: column;
+  align-items: $alignment;
+  justify-content: $justify;
+}
+@mixin seperationLine($height: 1em, $opacity: 1px) {
+  height: $height;
+  width: 0px;
+  border-right: solid $opacity rgba(92, 92, 92, 0.466);
+}
+
+@mixin button($borderColor: white, $upperBorderRadius: 1em, $lowerBorderRadius: 1em) {
+  position: relative;
+  border: 1px solid $borderColor;
+  border-radius: $upperBorderRadius;
+  color: $borderColor;
+  @if $borderColor==white {
+    background-color: $primaryColor;
+  } @else {
+    background-color: white;
+  }
+  &::before {
+    content: " ";
+    border-radius: $lowerBorderRadius;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    right: 4px;
+    bottom: 4px;
+    border: 1px solid $borderColor;
+  }
+  &:focus {
+    outline: none;
+  }
+  &:hover{
+    cursor: pointer;
+    @include buttonShrink(0.95)
+}
+}
+
+//Use this to prevent padding from pushing a component
+
+@mixin boxSizing {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box;
+}
+@mixin UpperContainer() {
+  width: 100%;
+  min-height: 15vh !important;
+  @include flexColumn(center, center);
+  @include boxSizing();
+  position: relative;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding-bottom: 1em;
+  background-size: cover;
+  @media only screen and (min-width: $bp-med) {
+    height: 23vh !important;
+    padding-bottom: 0em;
+  }
+
+  @media only screen and (min-width: $bp-xl) {
+    height: 27vh !important;
+  }
+}
+
+@mixin font($fontSize: medium, $weight: 400, $color: white) {
+  font-size: $fontSize;
+  @if $language == en {
+    font-family: "Nunito Sans";
+  } @else {
+    font-family: "Cairo";
+  }
+  font-weight: $weight;
+  color: $color;
+  line-height: 1.5;
+  margin: 0;
+}
+
+//FontSize is In PX
+@mixin overflow($fontSize,$linesToShow,$lineSpacing:1) {
+  display: block; /* Fallback for non-webkit */
+  display: -webkit-box;
+  max-width: 100%;
+  height: $fontSize * $lineSpacing * $linesToShow; /* Fallback for non-webkit */
+  margin: 0 auto;
+  font-size: $fontSize;
+  line-height: $lineSpacing;
+  -webkit-line-clamp: $linesToShow;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin boxShadow {
+  -webkit-box-shadow: 0px 3px 7px -1px rgba(0, 0, 0, 0.267);
+  -moz-box-shadow: 0px 3px 7px -1px rgba(0, 0, 0, 0.267);
+  box-shadow: 0px 3px 7px -1px rgba(0, 0, 0, 0.267);
+}

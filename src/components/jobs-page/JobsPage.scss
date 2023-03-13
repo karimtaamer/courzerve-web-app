@@ -1,0 +1,81 @@
+.jobs-MainContainer {
+  margin-bottom: 2em;
+  padding-bottom: 2em;
+  @include flexColumn(center, flex-start);
+  width: 100%;
+}
+.Jobs-Cards-Container {
+  @include flexRow(flex-start, space-between);
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 1em;
+}
+.Jobs-UpperContainer {
+  @include UpperContainer();
+  background-image: url(../../assets/icons/jobs/job-background-mobile.png);
+  @media only screen and (min-width: $bp-med) {
+    background-image: url(../../assets/icons/jobs/job-background.png);
+  }
+}
+
+.Jobs-Values-Container {
+  width: 90%;
+  margin-top: 3em;
+  @include flexColumn(center, flex-start);
+}
+
+.Jobs-Values-Card-Container {
+  width: 40vw;
+  margin-top: 1em;
+  @include flexColumn(center, flex-start);
+  text-align: center;
+  @include boxSizing;
+  position: relative;
+  @media only screen and (min-width: $bp-large) {
+    width: 20vw;
+  }
+}
+
+.Jobs-Values-Card-Image{
+  height: 5em;
+}
+.Jobs-Values-Card-Main-T{
+@include font(medium,700,$darkGreyTextColor);
+margin-top: 0.6em;
+}
+.Jobs-Values-Card-Sub-T{
+  @include font(small,400,$greyTextColor);
+  margin-top: 0.2em;
+  @media only screen and (min-width: $bp-large) {
+   width: 80%;
+  }
+  @media only screen and (min-width: $bp-xxl) {
+    width: 70%;
+   }
+  }
+.Jobs-Values-Card-Container-Border {
+  content: "";
+  display: none;
+  height: 50%; //You can change this if you want smaller/bigger borders
+  width: 1px;
+  position: absolute;
+  right: 0;
+  top: 25%; // If you want to set a smaller height and center it, change this value
+  background-color: #9b9b9b55;
+  @media only screen and (min-width: $bp-large) {
+    display: block;
+  }
+}
+.Jobs-Values-Card-Container-Border2 {
+  content: "";
+  height: 50%; //You can change this if you want smaller/bigger borders
+  width: 1px;
+  position: absolute;
+  right: 0;
+  top: 25%; // If you want to set a smaller height and center it, change this value
+  display: none;
+  background-color: #9b9b9b55;
+  @media only screen and (min-width: $bp-large) {
+    display: block;
+  }
+}

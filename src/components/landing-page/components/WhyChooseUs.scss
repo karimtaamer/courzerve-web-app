@@ -1,0 +1,240 @@
+.LandingPage-Landing-Container {
+  @include flexColumn(center, flex-start);
+  width: 100%;
+  min-height: 23em;
+  position: relative;
+  background-repeat: no-repeat;
+  text-align: center;
+  background-size: cover;
+  padding-top: 16%;
+  @include mainPadding;
+  background-image: url(../../../assets/icons/landing/landingBackground.png);
+  @media only screen and (min-width: $bp-med) {
+    min-height: 100vh;
+    padding-top: 8%;
+    background-image: url(../../../assets/icons/landing/landingBackground.png);
+  }
+  @media only screen and (min-width: $bp-xl) {
+    background-image: url(../../../assets/icons/landing/landingBackground.png);
+  }
+}
+
+.LandingPage-Landing-Header {
+  font-size: 2.5rem;
+  margin: 0;
+  color: $primaryColor;
+  @if $language == en {
+    font-family: 'Montserrat Alternates', sans-serif;
+  }@else{
+    font-family: 'Tajawal';
+  }
+  
+
+  @media only screen and (min-width: $bp-med) {
+    font-size: 3.2rem;
+  }
+  @media only screen and (min-width: $bp-large) {
+    font-size: 3.7rem;
+  }
+  @media only screen and (min-width: $bp-xxl) {
+    font-size: 4.7rem;
+  }
+}
+.LandingPage-Landing-SubHeader {
+  @include font(large, 400, $greyTextColor);
+  width: 90%;
+  margin: 1em auto 0 auto;
+  // display: none;
+  @media only screen and (min-width: $bp-med) {
+    font-size: 1.5rem;
+    display: block;
+  }
+  @media only screen and (min-width: $bp-xxl) {
+    font-size: 2rem;
+  }
+}
+
+.landingPage-CheckMainContainer{
+  width: 100%;
+  margin-top: 0.5em;
+  margin-bottom: 2em;
+  @include flexRow(center, space-around);
+  flex-wrap: wrap;
+  @media only screen and (min-width: $bp-med) {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    width: 100%;
+    @include flexRow(center, center);
+    flex-wrap: nowrap;
+  }
+}
+
+.landingSection-webMob{
+  @if $language == en {
+    @include flexColumn(flex-start, space-between);
+  } @else {
+    @include flexColumn(flex-end, space-between);
+  }
+
+  @media only screen and (min-width: $bp-med) {
+     width: 50%;
+    @include flexRow(center, space-around)
+  }
+}
+
+.landingPage-checkInnerContainer{
+  margin-bottom: 0.5em;
+  @if $language == en {
+    @include flexRow( flex-end, center)
+  } @else {
+    @include flexRow( flex-end, center, row-reverse)
+  }
+  @media only screen and (min-width: $bp-med) {
+    margin-bottom: 0;
+  }
+}
+
+.landingPage-checkInnerContainer img {
+  width: 2.5em;
+  height: 2.5em;
+  @if $language == en {
+    margin-right: 0.3em;
+  } @else {
+    margin-left: 0.3em;
+  }
+  
+  @media only screen and (min-width: $bp-med) {
+    width: 3.2em;
+    height: 3.2em;
+  }
+}
+
+.landingPage-UpperCheckText{
+margin: 0;
+@include font(small, 400, $primaryColor);
+@if $language == en {
+  text-align: left;
+} @else {
+  text-align: right;
+}
+@media only screen and (min-width: $bp-med) {
+  @include font(medium, 400, $primaryColor);
+}
+}
+
+.landingPage-LowerCheckText{
+  margin: 0;
+  @include font(medium, 700, $primaryColor);
+  @if $language == en {
+    text-align: left;
+  } @else {
+    text-align: right;
+  }
+  @media only screen and (min-width: $bp-med) {
+    @include font(x-large, 400, $primaryColor);
+  }
+}
+
+.landingSection-btn{
+ padding: 0.5em 1.6em 0.5em 1.6em;
+  background-color: $primaryColor;
+  border-radius: 1em;
+  @include font(large, 600, white);
+  @include button(white, 0.5em ,0.3em);
+margin-bottom: 1em;
+  @media only screen and (min-width: $bp-med) {
+    border-radius: 2em;
+    @include font(x-large, 600, white);
+    padding: 0.5em 1.7em 0.5em 1.7em;
+    @include button(white, 0.7em ,0.5em);
+  }
+
+  &:hover{
+    @include buttonShrink(0.9);
+  }
+}
+
+.landingSection-bottomImg{
+width: 95vw;
+  @media only screen and (min-width: $bp-med) {
+width: 80vw;
+  }
+}
+
+.WhyChooseUs-Container {
+  padding-top: 2em;
+  padding-bottom: 4em;
+  width: 100%;
+  background-color: #f4f4f4;
+  margin-top: 3em;
+  @include flexColumn(center, flex-start);
+}
+
+.WhyChooseUs-Cards-Container {
+  margin-top: 2em;
+  @include flexRow(flex-start, center);
+  flex-wrap: wrap;
+  padding: 0em 4%;
+  @media only screen and (min-width: $bp-med) {
+    width: 84%;
+    @include flexRow(flex-start, space-between);
+  }
+  @media only screen and (min-width: $bp-large) {
+    width: 84%;
+  }
+}
+.WhyChooseUs-Card-Container {
+  @if $language == en {
+    @include flexRow(center, center);
+  } @else {
+    @include flexRow(center, center, row-reverse);
+  }
+
+  text-align: center;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  height: 8em;
+  margin-top: 1em;
+  @include boxSizing;
+  @include boxShadow;
+  padding: 0em 1.2em;
+  border-radius: 0.5em;
+  @media only screen and (min-width: $bp-med) {
+    width: 40vw;
+  }
+}
+.WhyChooseUs-Card-Image {
+  height: 4em;
+  margin-right: auto;
+  @media only screen and (min-width: $bp-med) {
+    height: 3.5em;
+  }
+  @media only screen and (min-width: $bp-xxl) {
+    height: 4.5em;
+  }
+}
+.WhyChooseUs-Card-Main-T {
+  @include font(large, 400, $darkGreyTextColor);
+  margin-bottom: 0.2em;
+
+  @media only screen and (min-width: $bp-large) {
+    font-size: 1.2rem;
+  }
+  @media only screen and (min-width: $bp-xxl) {
+    font-size: 1.5rem;
+  }
+}
+.WhyChooseUs-Card-Sub-T {
+  @include font(small, 400, $greyTextColor);
+  @media only screen and (min-width: $bp-xxl) {
+    font-size: 1rem;
+  }
+}
+.WhyChooseUsSub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,180 @@
+.LandingPage-Landing-Search-Input-Container {
+  @if $language == en {
+    @include flexRow(center, flex-start);
+  } @else {
+    @include flexRow(center, flex-start, row-reverse);
+  }
+  
+  margin-top: 2em;
+  width: 100%;
+  height: 2.3em;
+  @media only screen and (min-width: $bp-med) {
+    width: 75%;
+    margin-top: 1.5em;
+  }
+  @media only screen and (min-width: $bp-large) {
+    width: 50%;
+  }
+  @media only screen and (min-width: $bp-xl) {
+    width: 45vw;
+    height: 2.5em;
+  }
+  @media only screen and (min-width: $bp-xxl) {
+    width: 45vw;
+    height: 3em;
+    margin-top: 2em;
+  }
+
+}
+
+.LandingPage-Landing-Search-SuggestContainer {
+  background-color: white;
+  @if $language == en {
+    @include flexRow(center);
+  } @else {
+    @include flexRow(center, flex-start, row-reverse);
+  }
+  width: 100%;
+}
+
+.LandingPage-Landing-Search-img {
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  margin-right: 1em;
+  @media only screen and (min-width: $bp-med) {
+    width: 3.5em;
+    height: 3.5em;
+  }
+ 
+}
+.LandingPage-Landing-Search-B {
+  min-width: 15%;
+  height: 2.5em;
+  -webkit-box-shadow: 4px 4px 5px 0px  #4e4e4e32;
+  -moz-box-shadow: 4px 4px 5px 0px  #4e4e4e32;
+  box-shadow: 4px 4px 5px 0px #4e4e4e32;
+  border: none;
+  @if $language == en {
+    border-radius: 0em 0.5em 0.5em 0em;
+  } @else {
+    border-radius: 0.5em 0em 0em 0.5em;
+  }
+  background-color: white;
+  color:  $primaryColor;
+  height: 100%;
+  @include flexColumn(center, center);
+  @media only screen and (min-width: $bp-med) {
+    min-width: 11%;
+    
+  }
+
+  @media only screen and (min-width: $bp-xl) {
+    min-width: 10%;
+   
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.react-autosuggest__container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.react-autosuggest__input {
+  min-width: 100%;
+  @if $language == en {
+    padding-left: 1em;
+    border-radius: 0.5em 0em 0em 0.5em;
+  } @else {
+    padding-right: 1em;
+    text-align: right;
+    border-radius: 0em 0.5em 0.5em 0em;
+  }
+  border: none;
+  -webkit-box-shadow: -4px 4px 5px 0px #4e4e4e32;
+  -moz-box-shadow: -4px 4px 5px 0px #4e4e4e32;
+  box-shadow: -4px 4px 5px 0px #4e4e4e32;
+  height:100%;
+
+
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+  &::placeholder {
+    color: rgb(144, 144, 144);
+  }
+
+ 
+}
+
+.react-autosuggest__input:focus {
+  outline: none;
+}
+
+.react-autosuggest__container--open .react-autosuggest__input {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.react-autosuggest__suggestions-container {
+  display: none;
+}
+
+.react-autosuggest__container--open .react-autosuggest__suggestions-container {
+  display: block;
+  position: absolute;
+  top: 2em;
+  width: 100%;
+  border: 1px solid rgba(170, 170, 170, 0.274);
+  border-top: 3px solid $primaryColor;
+  background-color: #fff;
+  font-family: Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  z-index: 2;
+  overflow: auto;
+  max-height: 70vh;
+  @media only screen and (min-width: $bp-xl) {
+    top: 2.3em;
+  }
+}
+
+.react-autosuggest__suggestions-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.react-autosuggest__suggestion {
+  cursor: pointer;
+  padding: 0.8rem 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.react-autosuggest__suggestion:not(:first-child) {
+  border-top: 1px solid #ddd;
+}
+
+.react-autosuggest__suggestion--focused {
+  background-color: #0c7eaf;
+  color: #fff;
+}
+
+.suggestion-content {
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+}
+
+.react-autosuggest__suggestion--focused .highlight {
+  color: #120000;
+}

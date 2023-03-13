@@ -1,0 +1,177 @@
+.NavBar-MainContainer {
+  background-color: transparent;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%;
+  height: 1.5em;
+  z-index: 333;
+}
+.NavBar-SubContainer {
+  @include flexRow(center, flex-start);
+  padding: 0.5em 4% 0.5em 4%;
+  // -webkit-box-shadow: 0px 2px 4px #4e4e4e32;
+  // -moz-box-shadow: 0px 2px 4px #4e4e4e32;
+  // box-shadow: 0px 2px 4px #4e4e4e32;
+  @media only screen and (min-width: $bp-med) {
+    padding: 0.5em 8% 0.5em 8%;
+  }
+}
+.NavBar-Logo-Wide {
+  width: 30%;
+  margin-right: auto;
+  @media only screen and (min-width: $bp-med) {
+    width: 18%;
+  }
+  @media only screen and (min-width: $bp-large) {
+    width: 15%;
+  }
+  @media only screen and (min-width: $bp-xl) {
+    width: 10%;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.NaveBar-Logo-nonScroll{
+  width: 8%;
+  margin-right: auto;
+  @media only screen and (min-width: $bp-med) {
+    width: 6%;
+  }
+  @media only screen and (min-width: $bp-large) {
+    width: 4%;
+  }
+  @media only screen and (min-width: $bp-xl) {
+    width: 2%;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.NavBar-BurgerMenu {
+  margin-left: auto;
+  background-color: rgba(192, 192, 192, 0.267);
+  padding: 0.4em 0.5em 0.2em 0.5em;
+  border-radius: 0.2em;
+  @media only screen and (min-width: $bp-med) {
+    display: none;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+.NavBar-Links-Container {
+  background-color: rgb(255, 255, 255) !important;
+  margin-left: 5%;
+  margin-right: 5%;
+  @if $language == ar {
+    text-align: right;
+  }
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 90%;
+
+  border-top: 3px solid $primaryColor;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+.NavBar-Links-text {
+  margin: 0;
+  &:hover {
+    cursor: pointer;
+  }
+  @include font(1rem, 600, $darkGreyTextColor);
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: 0.5em;
+  @media only screen and (min-width: $bp-small) {
+    font-size: large;
+  }
+  @media only screen and (min-width: $bp-med) {
+    font-size: x-large;
+  }
+  @media only screen and (min-width: $bp-large) {
+    font-size: xx-large;
+  }
+}
+.NavBar-Links-Registration-Container {
+  @include flexRow(center, center);
+  margin-top: 1em;
+  width: 100%;
+}
+.NavBar-B {
+  display: none;
+  background-color: transparent;
+  border: none;
+  &:hover {
+    cursor: pointer;
+  }
+  &:focus{
+    outline: none;
+  }
+  font-weight: bold;
+  @include font(small, 600);
+  @media only screen and (min-width: $bp-med) {
+    display: block;
+  }
+}
+.NavBar-SignUp-B {
+  display: none;
+  @include font(small, 600);
+  @include button(#ffffff, 0.8em, 0.5em);
+  background: $primaryColor;
+  @if $language == en{
+    padding: 0.6em 2em 0.5em 2em;
+  }@else{
+    padding: 0.5em 2em 0.5em 2em;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  font-weight: bold;
+  @media only screen and (min-width: $bp-med) {
+    display: block;
+  }
+}
+.NavBar-SignUp-B-White {
+  display: none;
+  @include font(small, 600, $primaryColor);
+  @include button($primaryColor, 0.8em, 0.5em);
+  background: white;
+  @if $language == en{
+    padding: 0.6em 2em 0.5em 2em;
+  }@else{
+    padding: 0.5em 2em 0.5em 2em;
+  }
+  
+  font-weight: bold;
+  &:hover {
+    cursor: pointer;
+  }
+  @media only screen and (min-width: $bp-med) {
+    display: block;
+  }
+}
+.NavBar-SeperationLine {
+  @include seperationLine(1.4em !important, 1px);
+  margin-left: 0.5em;
+  margin-right: 1em;
+  display: none;
+  @media only screen and (min-width: $bp-med) {
+    display: block;
+  }
+}
+
+
+.NavBar-Language{
+  display: none;
+  cursor: pointer;
+  @include font(medium, 600, white);
+  margin-left: 1em;
+  margin-right: -2em;
+  @media only screen and (min-width: $bp-med) {
+    display: block;
+  }
+}

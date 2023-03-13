@@ -1,0 +1,63 @@
+.InstructorMain-MainContainer {
+    width: 100%;
+    @include boxShadow();
+    border-radius: 0.5em;
+    @media only screen and (min-width: $bp-med) {
+        width: 23%;
+        position: fixed;
+        @if $language == en {
+            left: 8%;
+            top: 32;
+        } @else {
+            right: 8%;
+            top: 32;
+        }   
+    }
+    @media only screen and (min-width: $bp-xl) {
+        width: 16em;
+        @if $language == en {
+            left: 8em;
+        } @else {
+            right: 8em;
+        }
+    }
+}
+.InstructorMain-Img {
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    margin-top: 1em;
+}
+.InstructorMain-Title {
+    @include font(x-large, 700, $darkGreyTextColor);
+    margin-top: 0.8em;
+}
+.InstructorMain-SubTitle {
+    @include font(medium, 300, $darkGreyTextColor);
+    margin-top: 0em;
+}
+
+.InstructorPage-aboutme{
+    @if $language == en {
+        text-align: left;
+    } @else {
+        text-align: right;
+        direction:rtl;
+    }
+}
+
+.InstructorMain-Rating-Container {
+    @include font(medium, 600, $darkGreyTextColor);
+    width: 100%;
+    border-top: solid 1px rgba(190, 190, 190, 0.445);
+    border-bottom: solid 1px rgba(190, 190, 190, 0.445);
+    margin-top: 1.2em;
+    padding: 0.5em;
+    @include boxSizing;
+}
+
+.InstructorMain-Finished-T {
+    @include font(medium, 600, $darkGreyTextColor);
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
